@@ -44,6 +44,34 @@ The experiments focus on **FPGA-based design**, **High-Level Synthesis (HLS)**, 
 
 ---
 
+### Experiment 3: Experiment 3: FIR Filter using Zynq PS + AXI DMA + HLS IP
+
+- Implemented an **FIR filter** hardware accelerator in the Programmable Logic (PL) **using Vitis HLS**.
+- Integrated the generated FIR IP with the **Zynq Processing System (PS) using the AXI4-Stream protocol**.
+- Used **AXI DMA** to transfer input samples from DDR memory to the FIR accelerator and store filtered output back into DDR.
+
+**Key tasks:**
+- FIR filter design using **AXI-Stream** interfaces in HLS
+- Exporting HLS design as a Vivado IP core from Vitis HLS
+- Building a Zynq block design in Vivado with:
+  - Zynq Processing System (as Master)
+  - AXI DMA (MM2S and S2MM channels) (as Slave)
+  - FIR HLS IP connected through AXI Stream
+- Bitstream generation and hardware export to Vitis IDE
+- Developing a Vitis C application to:
+  - Initialize DMA
+  - Send input samples through MM2S (Master to Slave)
+  - Receive filtered output through S2MM (Slave to Master)
+  - Print results using UART
+
+**Learning Outcome:**
+- Understanding high-speed PS–PL data movement using AXI DMA
+- Practical experience with AXI4-Stream handshaking (TVALID/TREADY/TLAST)
+- Implementing real-time hardware acceleration using HLS + DMA + Zynq integration
+
+---
+
+
 ## 🧑‍🎓 Author
 
 **Kaushik Balaji M S**  
