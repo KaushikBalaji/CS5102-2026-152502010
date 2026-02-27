@@ -1,6 +1,7 @@
 # TO run the command line
 # Vitis_HLS/2023.1/bin/vitis_hls -i
 
+# log_file -noappend log_file.log
 
 set project_name "matmul"
 set top_function "MATMUL"
@@ -41,10 +42,11 @@ create_clock -period $clk_period -name default
 csynth_design
 
 # Optional: RTL Co-Simulation
-# cosim_design
+# cosim_design > cosim.log
 
 # Optional: Export RTL
-# export_design -format ip_catalog
+export_design -format ip_catalog
+
 
 puts "HLS Flow Completed Successfully!"
 exit

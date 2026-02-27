@@ -12,7 +12,6 @@
 # Generated sources
 *.gen/
 *.jou
-*.log
 *.str
 *.tmp
 
