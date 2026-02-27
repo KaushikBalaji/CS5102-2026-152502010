@@ -7,8 +7,8 @@ set project_name "matmul"
 set top_function "MATMUL"
 set solution_name "solution1"
 
-set design_file "matmul_naive.cpp"
-set tb_file "matmul_tb.cpp"
+set design_file "matmul_stream.cpp"
+set tb_file "matmul_stream_tb.cpp"
 set part_name "xc7z020clg484-1"
 set clk_period 10
 
@@ -41,19 +41,20 @@ create_clock -period $clk_period -name default
 # C Synthesis
 csynth_design
 
-
 # Copy reports to top-level folder for easy access
-file copy -force "$project_name/$solution_name/syn/report/MATMUL_csynth.rpt" "reports/csynth_naive_report.rpt"
+file copy -force "$project_name/$solution_name/syn/report/MATMUL_csynth.rpt" "reports/csynth_stream_report.rpt"
 
-file copy -force "$project_name/$solution_name/syn/report/csynth_design_size.rpt" "reports/design_naive_size.rpt"
+file copy -force "$project_name/$solution_name/syn/report/csynth_design_size.rpt" "reports/design_stream_size.rpt"
+
 
 # Optional: RTL Co-Simulation
 # cosim_design > cosim.log
 
 # Optional: Export RTL
 export_design -format ip_catalog
+# file copy -force "$project_name/$solution_name/impl/export.zip" "export.zip"
 
-file copy -force "vitis_hls.log" "reports/vitis_hls_naive.log"
+file copy -force "vitis_hls.log" "reports/vitis_hls_stream.log"
 
 puts "HLS Flow Completed Successfully!"
 exit
