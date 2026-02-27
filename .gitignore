@@ -16,7 +16,6 @@
 *.tmp
 
 # Reports
-*.rpt
 *.dcp
 
 # Backups
