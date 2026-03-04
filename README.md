@@ -71,6 +71,31 @@ The experiments focus on **FPGA-based design**, **High-Level Synthesis (HLS)**, 
 
 ---
 
+### Experiment 4: Block Matrix Multiplication using Zynq PS + AXI DMA + HLS IP
+
+- Implemented a Matrix Multiplication hardware accelerator in the Programmable Logic (PL) using Vitis HLS.
+- Explored multiple optimization strategies including pipelining, loop unrolling, and array partitioning to reduce computation latency.
+- Integrated the generated matrix multiplication IP with the Zynq Processing System (PS) using AXI4-Stream interfaces.
+- Used AXI DMA to transfer input matrices from DDR memory to the accelerator and write the computed output matrix back to DDR memory.
+
+**Key tasks:**
+- Implementation of 16×16 matrix multiplication using different HLS optimization techniques:
+  - Naive sequential implementation
+  - Loop pipelined implementation
+  - Loop unrolling with pipelining
+- Implementing AXI-Stream interfaces in HLS for high-throughput data transfer
+- Creating a Zynq block design in Vivado with:
+  - Zynq Processing System (PS)
+  - AXI DMA (MM2S and S2MM channels)
+  - Matrix Multiplication HLS IP connected through AXI Stream
+- Bitstream generation and hardware export to Vitis IDE
+- Using AXI DMA to stream input matrix rows into the accelerator and receive computed results
+
+**Learning Outcome:**
+- Understanding hardware acceleration of computationally intensive algorithms using HLS
+- Learning the impact of loop pipelining and loop unrolling on performance and resource utilization
+
+---
 
 ## 🧑‍🎓 Author
 
@@ -83,3 +108,4 @@ Indian Institute of Technology, Palakkad
 ## 📄 License
 
 This repository is intended for academic and educational use.
+
