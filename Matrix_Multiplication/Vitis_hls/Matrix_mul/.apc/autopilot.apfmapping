@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mat_mul.cpp" path="/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/mat_mul.cpp"/>
+    <originFiles name="mat_mul_naive.cpp" path="/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/mat_mul_naive.cpp"/>
+    <originFiles name="mat_mul_pipeline.cpp" path="/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/mat_mul_pipeline.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

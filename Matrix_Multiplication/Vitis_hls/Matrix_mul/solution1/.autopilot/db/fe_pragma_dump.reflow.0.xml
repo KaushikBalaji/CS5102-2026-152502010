@@ -1,0 +1,52 @@
+<pragmas>
+<pragma file="Matrix_mul/mat_mul.cpp" line="60" pragmaType="pipeline" parentfunction="MATMUL" off="0" ii="1" rewind="0" style=""/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="63" pragmaType="unroll" parentfunction="MATMUL" factor="-1" skip_exit_check="0"/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="48" pragmaType="pipeline" parentfunction="MATMUL" off="0" ii="4" rewind="0" style=""/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="52" pragmaType="unroll" parentfunction="MATMUL" factor="-1" skip_exit_check="0"/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="37" pragmaType="pipeline" parentfunction="MATMUL" off="0" ii="1" rewind="0" style=""/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="40" pragmaType="unroll" parentfunction="MATMUL" factor="-1" skip_exit_check="0"/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="27" pragmaType="pipeline" parentfunction="MATMUL" off="0" ii="1" rewind="0" style=""/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="30" pragmaType="unroll" parentfunction="MATMUL" factor="-1" skip_exit_check="0"/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="14" pragmaType="interface" parentfunction="MATMUL" mode="axis" port="s_axis" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="15" pragmaType="interface" parentfunction="MATMUL" mode="axis" port="m_axis" register="0" register_mode="both" name="" depth="-1"/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="16" pragmaType="interface" parentfunction="MATMUL" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="22" pragmaType="array_partition" parentfunction="MATMUL" dim="2" factor="0" mode="complete" dynamic="0" variable="A"/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="23" pragmaType="array_partition" parentfunction="MATMUL" dim="1" factor="0" mode="complete" dynamic="0" variable="B"/>
+<pragma file="Matrix_mul/mat_mul.cpp" line="24" pragmaType="array_partition" parentfunction="MATMUL" dim="0" factor="0" mode="complete" dynamic="0" variable="AB"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint(bool)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base(bool)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="/home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi1ELb0EEC2EDq1_j" off="0" region="0" recursive="0"/>
+<pragma file="/home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<1, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+<pragma file="/home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<64, false>::ssdm_int(unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<512>::ap_uint()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<64>::ap_uint()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<1>::ap_uint()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<1, false>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="/home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<64, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<64, false>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base()" off="0" region="0" recursive="0"/>
+<pragma file="/home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="_ZN8ssdm_intILi512ELb0EEC2EDq512_j" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<32, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="/home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_common.h" line="523" pragmaType="inline" parentfunction="ssdm_int<32, false>::ssdm_int(unsigned int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="to_uint64" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<512, false>::ap_range_ref(ap_int_base<512, false>*, int, int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="range" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<512, false>::operator unsigned long long() const" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<512>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_uint<32>::ap_uint(int)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_user_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_id_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="get_dest_ptr" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="/home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_common.h" line="0" pragmaType="inline" parentfunction="ssdm_int<512, false>::ssdm_int()" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="checkOverflowBaseC" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_range_ref<512, false>& ap_range_ref<512, false>::operator=<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="ap_int_base<512, false>::ap_int_base<32, false>(ap_int_base<32, false> const&)" off="0" region="0" recursive="0"/>
+</pragmas>

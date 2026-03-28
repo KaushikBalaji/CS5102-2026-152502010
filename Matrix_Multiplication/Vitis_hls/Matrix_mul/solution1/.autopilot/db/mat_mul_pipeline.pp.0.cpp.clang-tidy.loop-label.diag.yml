@@ -1,0 +1,76 @@
+---
+MainSourceFile:  /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1213_1:  '
+    FileOffset:      1213
+    FilePath:        /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_base.h
+    Replacements:    
+      - FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp
+        Offset:          65241
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1213_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_676_1:  '
+    FileOffset:      676
+    FilePath:        /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp
+        Offset:          292621
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_676_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_690_1:  '
+    FileOffset:      690
+    FilePath:        /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp
+        Offset:          293085
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_690_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_704_1:  '
+    FileOffset:      704
+    FilePath:        /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_int_ref.h
+    Replacements:    
+      - FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp
+        Offset:          293550
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_704_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_1247_1:  '
+    FileOffset:      1247
+    FilePath:        /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/ap_fixed_base.h
+    Replacements:    
+      - FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp
+        Offset:          576297
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_1247_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_31_1:  '
+    FileOffset:      31
+    FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/mat_mul_pipeline.cpp
+    Replacements:    
+      - FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp
+        Offset:          955665
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_31_1: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_43_2:  '
+    FileOffset:      43
+    FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/mat_mul_pipeline.cpp
+    Replacements:    
+      - FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp
+        Offset:          955875
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_43_2: '
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_75_3:  '
+    FileOffset:      75
+    FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/mat_mul_pipeline.cpp
+    Replacements:    
+      - FilePath:        /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp
+        Offset:          956347
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_75_3: '
+...

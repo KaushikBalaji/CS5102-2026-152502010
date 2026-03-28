@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "MATMUL",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "MATMUL"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/csynth.tcl",
+    "sourceLine": 16,
+    "success": true
+  }
+]

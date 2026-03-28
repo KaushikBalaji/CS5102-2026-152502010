@@ -1,0 +1,993 @@
+INFO-FLOW: Workspace /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1 opened at Wed Mar 04 23:06:38 IST 2026
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z020-clg484-1 
+Execute       create_platform xc7z020-clg484-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/Vivado/Vitis_HLS/2023.1/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/Vivado/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+Command       create_platform done; 0.28 sec.
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.33 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 0.39 sec.
+Execute   set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+Execute     create_platform xc7z020-clg484-1 -board  
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 229.102 MB.
+Execute       set_directive_top MATMUL -name=MATMUL 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO: [HLS 200-10] Analyzing design file 'Matrix_mul/mat_mul.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling Matrix_mul/mat_mul.cpp as C++
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang Matrix_mul/mat_mul.cpp -foptimization-record-file=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/Vivado/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp -hls-platform-db-name=/home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.cpp.clang.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp -hls-platform-db-name=/home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/clang.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/clang.err.log
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/.systemc_flag -fix-errors /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.22 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/all.directive.json -fix-errors /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.36 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.4 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp.clang-tidy.loop-label.err.log
+Execute         source /home/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 0.45 sec.
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.bc -hls-platform-db-name=/home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp.clang.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.pp.0.cpp.clang.err.log
+INFO: [HLS 200-10] Analyzing design file 'Matrix_mul/mat_mul_naive.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling Matrix_mul/mat_mul_naive.cpp as C++
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang Matrix_mul/mat_mul_naive.cpp -foptimization-record-file=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/Vivado/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp -hls-platform-db-name=/home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.cpp.clang.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp -hls-platform-db-name=/home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/clang.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/clang.err.log
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/.systemc_flag -fix-errors /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.22 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/all.directive.json -fix-errors /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.21 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp.clang-tidy.loop-label.err.log
+Command       clang_tidy done; 0.43 sec.
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.bc -hls-platform-db-name=/home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp.clang.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.pp.0.cpp.clang.err.log
+INFO: [HLS 200-10] Analyzing design file 'Matrix_mul/mat_mul_pipeline.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling Matrix_mul/mat_mul_pipeline.cpp as C++
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang Matrix_mul/mat_mul_pipeline.cpp -foptimization-record-file=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /home/Vivado/Vitis_HLS/2023.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -insert-hls-directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp -hls-platform-db-name=/home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.cpp.clang.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp -hls-platform-db-name=/home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/clang.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/clang.err.log
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/.systemc_flag -fix-errors /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.22 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/all.directive.json -fix-errors /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.22 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp.clang-tidy.loop-label.err.log
+Command       clang_tidy done; 0.46 sec.
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot -I /home/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.bc -hls-platform-db-name=/home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp.clang.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.33 seconds. CPU system time: 1.13 seconds. Elapsed time: 5.45 seconds; current allocated memory: 229.980 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.g.bc" "/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.g.bc" "/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.g.bc"  
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul.g.bc /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_naive.g.bc /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.g.bc -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.0.bc > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/Vivado/Vitis_HLS/2023.1/lnx64/lib/libhlsm_39.bc /home/Vivado/Vitis_HLS/2023.1/lnx64/lib/libhlsmc++_39.bc 
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /home/Vivado/Vitis_HLS/2023.1/lnx64/lib/libhlsm_39.bc /home/Vivado/Vitis_HLS/2023.1/lnx64/lib/libhlsmc++_39.bc -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.1 sec.
+Execute       run_link_or_opt -opt -out /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=MATMUL -reflow-float-conversion 
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=MATMUL -reflow-float-conversion -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Command       run_link_or_opt done; 0.43 sec.
+Execute       run_link_or_opt -out /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/Vivado/Vitis_HLS/2023.1/lnx64/lib/libfloatconversion_39.bc 
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /home/Vivado/Vitis_HLS/2023.1/lnx64/lib/libfloatconversion_39.bc -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=MATMUL 
+INFO-FLOW: run_clang exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=MATMUL -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+INFO-FLOW: run_clang (background poll_ms 5000) exec: /home/Vivado/Vitis_HLS/2023.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=MATMUL -mllvm -hls-db-dir -mllvm /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1024 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=1024 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg484-1 2> /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 698 Compile/Link /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 698 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 1,932 Unroll/Inline /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 1,932 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details: /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 2,664 Performance/Pipeline /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 2,664 instructions in the design after the 'Performance/Pipeline' phase of compilation. See the Design Size Report for more details: /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/csynth_design_size.rpt
+Execute       send_msg_by_id INFO @200-1995@%s%s%s 2,434 Optimizations /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/csynth_design_size.rpt 
+INFO: [HLS 200-1995] There were 2,434 instructions in the design after the 'Optimizations' phase of compilation. See the Design Size Report for more details: /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_62_3' is marked as complete unroll implied by the pipeline pragma (Matrix_mul/mat_mul.cpp:62:26)
+INFO: [HLS 214-291] Loop 'col' is marked as complete unroll implied by the pipeline pragma (Matrix_mul/mat_mul.cpp:49:7)
+INFO: [HLS 214-291] Loop 'product' is marked as complete unroll implied by the pipeline pragma (Matrix_mul/mat_mul.cpp:51:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_39_2' is marked as complete unroll implied by the pipeline pragma (Matrix_mul/mat_mul.cpp:39:26)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_29_1' is marked as complete unroll implied by the pipeline pragma (Matrix_mul/mat_mul.cpp:29:26)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_62_3' (Matrix_mul/mat_mul.cpp:62:26) in function 'MATMUL' completely with a factor of 16 (Matrix_mul/mat_mul.cpp:12:0)
+INFO: [HLS 214-186] Unrolling loop 'col' (Matrix_mul/mat_mul.cpp:49:7) in function 'MATMUL' completely with a factor of 16 (Matrix_mul/mat_mul.cpp:12:0)
+INFO: [HLS 214-186] Unrolling loop 'product' (Matrix_mul/mat_mul.cpp:51:22) in function 'MATMUL' completely with a factor of 16 (Matrix_mul/mat_mul.cpp:12:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_39_2' (Matrix_mul/mat_mul.cpp:39:26) in function 'MATMUL' completely with a factor of 16 (Matrix_mul/mat_mul.cpp:12:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_29_1' (Matrix_mul/mat_mul.cpp:29:26) in function 'MATMUL' completely with a factor of 16 (Matrix_mul/mat_mul.cpp:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'A': Complete partitioning on dimension 2. (Matrix_mul/mat_mul.cpp:18:6)
+INFO: [HLS 214-248] Applying array_partition to 'B': Complete partitioning on dimension 1. (Matrix_mul/mat_mul.cpp:19:9)
+INFO: [HLS 214-248] Applying array_partition to 'AB': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (Matrix_mul/mat_mul.cpp:20:9)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.53 seconds. CPU system time: 0.32 seconds. Elapsed time: 6.79 seconds; current allocated memory: 232.137 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 232.137 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top MATMUL -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.0.bc -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.18 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 237.410 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.1.bc -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 237.988 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.g.1.bc to /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.o.1.bc -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+Command         transform done; 0.34 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'MATMUL' (Matrix_mul/mat_mul.cpp:11:22)...464 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.41 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.43 seconds; current allocated memory: 267.805 MB.
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.o.2.bc -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Execute           auto_get_db
+Command         transform done; 0.29 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 312.273 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 1.02 sec.
+Command     elaborate done; 13.27 sec.
+Execute     ap_eval exec zip -j /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'MATMUL' ...
+Execute       ap_set_top_model MATMUL 
+Execute       get_model_list MATMUL -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model MATMUL 
+Execute       preproc_iomode -model MATMUL_Pipeline_store 
+Execute       preproc_iomode -model MATMUL_Pipeline_row 
+Execute       preproc_iomode -model MATMUL_Pipeline_load_B 
+Execute       preproc_iomode -model MATMUL_Pipeline_load_A 
+Execute       get_model_list MATMUL -filter all-wo-channel 
+INFO-FLOW: Model list for configure: MATMUL_Pipeline_load_A MATMUL_Pipeline_load_B MATMUL_Pipeline_row MATMUL_Pipeline_store MATMUL
+INFO-FLOW: Configuring Module : MATMUL_Pipeline_load_A ...
+Execute       set_default_model MATMUL_Pipeline_load_A 
+Execute       apply_spec_resource_limit MATMUL_Pipeline_load_A 
+INFO-FLOW: Configuring Module : MATMUL_Pipeline_load_B ...
+Execute       set_default_model MATMUL_Pipeline_load_B 
+Execute       apply_spec_resource_limit MATMUL_Pipeline_load_B 
+INFO-FLOW: Configuring Module : MATMUL_Pipeline_row ...
+Execute       set_default_model MATMUL_Pipeline_row 
+Execute       apply_spec_resource_limit MATMUL_Pipeline_row 
+INFO-FLOW: Configuring Module : MATMUL_Pipeline_store ...
+Execute       set_default_model MATMUL_Pipeline_store 
+Execute       apply_spec_resource_limit MATMUL_Pipeline_store 
+INFO-FLOW: Configuring Module : MATMUL ...
+Execute       set_default_model MATMUL 
+Execute       apply_spec_resource_limit MATMUL 
+INFO-FLOW: Model list for preprocess: MATMUL_Pipeline_load_A MATMUL_Pipeline_load_B MATMUL_Pipeline_row MATMUL_Pipeline_store MATMUL
+INFO-FLOW: Preprocessing Module: MATMUL_Pipeline_load_A ...
+Execute       set_default_model MATMUL_Pipeline_load_A 
+Execute       cdfg_preprocess -model MATMUL_Pipeline_load_A 
+Execute       rtl_gen_preprocess MATMUL_Pipeline_load_A 
+INFO-FLOW: Preprocessing Module: MATMUL_Pipeline_load_B ...
+Execute       set_default_model MATMUL_Pipeline_load_B 
+Execute       cdfg_preprocess -model MATMUL_Pipeline_load_B 
+Command       cdfg_preprocess done; 0.14 sec.
+Execute       rtl_gen_preprocess MATMUL_Pipeline_load_B 
+INFO-FLOW: Preprocessing Module: MATMUL_Pipeline_row ...
+Execute       set_default_model MATMUL_Pipeline_row 
+Execute       cdfg_preprocess -model MATMUL_Pipeline_row 
+Command       cdfg_preprocess done; 0.14 sec.
+Execute       rtl_gen_preprocess MATMUL_Pipeline_row 
+INFO-FLOW: Preprocessing Module: MATMUL_Pipeline_store ...
+Execute       set_default_model MATMUL_Pipeline_store 
+Execute       cdfg_preprocess -model MATMUL_Pipeline_store 
+Execute       rtl_gen_preprocess MATMUL_Pipeline_store 
+INFO-FLOW: Preprocessing Module: MATMUL ...
+Execute       set_default_model MATMUL 
+Execute       cdfg_preprocess -model MATMUL 
+Execute       rtl_gen_preprocess MATMUL 
+INFO-FLOW: Model list for synthesis: MATMUL_Pipeline_load_A MATMUL_Pipeline_load_B MATMUL_Pipeline_row MATMUL_Pipeline_store MATMUL
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MATMUL_Pipeline_load_A' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model MATMUL_Pipeline_load_A 
+Execute       schedule -model MATMUL_Pipeline_load_A 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'load_A'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'load_A'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.4 seconds; current allocated memory: 314.945 MB.
+Execute       syn_report -verbosereport -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.sched.adb -f 
+INFO-FLOW: Finish scheduling MATMUL_Pipeline_load_A.
+Execute       set_default_model MATMUL_Pipeline_load_A 
+Execute       bind -model MATMUL_Pipeline_load_A 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 314.945 MB.
+Execute       syn_report -verbosereport -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.bind.adb -f 
+INFO-FLOW: Finish binding MATMUL_Pipeline_load_A.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MATMUL_Pipeline_load_B' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model MATMUL_Pipeline_load_B 
+Execute       schedule -model MATMUL_Pipeline_load_B 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'load_B'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'load_B'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.16 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 321.914 MB.
+Execute       syn_report -verbosereport -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.sched.adb -f 
+INFO-FLOW: Finish scheduling MATMUL_Pipeline_load_B.
+Execute       set_default_model MATMUL_Pipeline_load_B 
+Execute       bind -model MATMUL_Pipeline_load_B 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 321.914 MB.
+Execute       syn_report -verbosereport -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.bind.adb -f 
+INFO-FLOW: Finish binding MATMUL_Pipeline_load_B.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MATMUL_Pipeline_row' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model MATMUL_Pipeline_row 
+Execute       schedule -model MATMUL_Pipeline_row 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'row'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 4, Depth = 9, loop 'row'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 2.87 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.92 seconds. CPU system time: 0 seconds. Elapsed time: 2.92 seconds; current allocated memory: 336.523 MB.
+Execute       syn_report -verbosereport -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.sched.adb -f 
+INFO-FLOW: Finish scheduling MATMUL_Pipeline_row.
+Execute       set_default_model MATMUL_Pipeline_row 
+Execute       bind -model MATMUL_Pipeline_row 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.2 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 336.523 MB.
+Execute       syn_report -verbosereport -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 0.25 sec.
+Execute       db_write -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.bind.adb -f 
+INFO-FLOW: Finish binding MATMUL_Pipeline_row.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MATMUL_Pipeline_store' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model MATMUL_Pipeline_store 
+Execute       schedule -model MATMUL_Pipeline_store 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'store'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'store'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.2 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.51 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 338.211 MB.
+Execute       syn_report -verbosereport -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.sched.adb -f 
+INFO-FLOW: Finish scheduling MATMUL_Pipeline_store.
+Execute       set_default_model MATMUL_Pipeline_store 
+Execute       bind -model MATMUL_Pipeline_store 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 338.211 MB.
+Execute       syn_report -verbosereport -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.bind.adb -f 
+INFO-FLOW: Finish binding MATMUL_Pipeline_store.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MATMUL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model MATMUL 
+Execute       schedule -model MATMUL 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.19 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 345.094 MB.
+Execute       syn_report -verbosereport -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.verbose.sched.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.sched.adb -f 
+INFO-FLOW: Finish scheduling MATMUL.
+Execute       set_default_model MATMUL 
+Execute       bind -model MATMUL 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.19 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 345.094 MB.
+Execute       syn_report -verbosereport -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.verbose.bind.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 0.24 sec.
+Execute       db_write -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.bind.adb -f 
+INFO-FLOW: Finish binding MATMUL.
+Execute       get_model_list MATMUL -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess MATMUL_Pipeline_load_A 
+Execute       rtl_gen_preprocess MATMUL_Pipeline_load_B 
+Execute       rtl_gen_preprocess MATMUL_Pipeline_row 
+Execute       rtl_gen_preprocess MATMUL_Pipeline_store 
+Execute       rtl_gen_preprocess MATMUL 
+INFO-FLOW: Model list for RTL generation: MATMUL_Pipeline_load_A MATMUL_Pipeline_load_B MATMUL_Pipeline_row MATMUL_Pipeline_store MATMUL
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MATMUL_Pipeline_load_A' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model MATMUL_Pipeline_load_A -top_prefix MATMUL_ -sub_prefix MATMUL_ -mg_file /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MATMUL_Pipeline_load_A'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 345.094 MB.
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute       gen_rtl MATMUL_Pipeline_load_A -style xilinx -f -lang vhdl -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/vhdl/MATMUL_MATMUL_Pipeline_load_A 
+Execute       gen_rtl MATMUL_Pipeline_load_A -style xilinx -f -lang vlog -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/verilog/MATMUL_MATMUL_Pipeline_load_A 
+Execute       syn_report -csynth -model MATMUL_Pipeline_load_A -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/MATMUL_Pipeline_load_A_csynth.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -rtlxml -model MATMUL_Pipeline_load_A -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/MATMUL_Pipeline_load_A_csynth.xml 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -verbosereport -model MATMUL_Pipeline_load_A -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.verbose.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -model MATMUL_Pipeline_load_A -f -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.adb 
+Execute       db_write -model MATMUL_Pipeline_load_A -bindview -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info MATMUL_Pipeline_load_A -p /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MATMUL_Pipeline_load_B' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model MATMUL_Pipeline_load_B -top_prefix MATMUL_ -sub_prefix MATMUL_ -mg_file /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.compgen.tcl 
+INFO: [RTGEN 206-104] Estimated max fanout for 'MATMUL_Pipeline_load_B' is 8449 from HDL expression: (~((ap_start_int == 1'b0) | ((icmp_ln36_fu_3492_p2 == 1'd0) & (s_axis_TVALID == 1'b0))) & (icmp_ln36_fu_3492_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MATMUL_Pipeline_load_B'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 350.488 MB.
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute       gen_rtl MATMUL_Pipeline_load_B -style xilinx -f -lang vhdl -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/vhdl/MATMUL_MATMUL_Pipeline_load_B 
+Execute       gen_rtl MATMUL_Pipeline_load_B -style xilinx -f -lang vlog -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/verilog/MATMUL_MATMUL_Pipeline_load_B 
+Execute       syn_report -csynth -model MATMUL_Pipeline_load_B -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/MATMUL_Pipeline_load_B_csynth.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -rtlxml -model MATMUL_Pipeline_load_B -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/MATMUL_Pipeline_load_B_csynth.xml 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -verbosereport -model MATMUL_Pipeline_load_B -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.verbose.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -model MATMUL_Pipeline_load_B -f -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.adb 
+Execute       db_write -model MATMUL_Pipeline_load_B -bindview -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info MATMUL_Pipeline_load_B -p /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MATMUL_Pipeline_row' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model MATMUL_Pipeline_row -top_prefix MATMUL_ -sub_prefix MATMUL_ -mg_file /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MATMUL_Pipeline_row' pipeline 'row' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'MATMUL_Pipeline_row' is 8192 from HDL expression: ((icmp_ln47_reg_12735 == 1'd1) & (1'b0 == ap_block_pp0_stage0_01001) & (1'b1 == ap_CS_fsm_pp0_stage0))
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 64 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MATMUL_Pipeline_row'.
+Command       create_rtl_model done; 0.29 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.49 seconds; current allocated memory: 377.027 MB.
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute       gen_rtl MATMUL_Pipeline_row -style xilinx -f -lang vhdl -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/vhdl/MATMUL_MATMUL_Pipeline_row 
+Execute       gen_rtl MATMUL_Pipeline_row -style xilinx -f -lang vlog -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/verilog/MATMUL_MATMUL_Pipeline_row 
+Execute       syn_report -csynth -model MATMUL_Pipeline_row -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/MATMUL_Pipeline_row_csynth.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 0.16 sec.
+Execute       syn_report -rtlxml -model MATMUL_Pipeline_row -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/MATMUL_Pipeline_row_csynth.xml 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -verbosereport -model MATMUL_Pipeline_row -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.verbose.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 0.36 sec.
+Execute       db_write -model MATMUL_Pipeline_row -f -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.adb 
+Command       db_write done; 0.13 sec.
+Execute       db_write -model MATMUL_Pipeline_row -bindview -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info MATMUL_Pipeline_row -p /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MATMUL_Pipeline_store' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model MATMUL_Pipeline_store -top_prefix MATMUL_ -sub_prefix MATMUL_ -mg_file /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'MATMUL_Pipeline_store' pipeline 'store' pipeline type 'loop pipeline'
+INFO: [HLS 200-1553] Disabling free running pipeline (frp) architecture on pipeline 'store' in module 'MATMUL_Pipeline_store', because the estimated Stream Port Number is 39, which is bigger than the frp_stream_port_number threshold of 20.
+INFO: [RTGEN 206-100] Generating core module 'mux_16_4_32_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MATMUL_Pipeline_store'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.97 seconds. CPU system time: 0.04 seconds. Elapsed time: 1.01 seconds; current allocated memory: 411.125 MB.
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute       gen_rtl MATMUL_Pipeline_store -style xilinx -f -lang vhdl -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/vhdl/MATMUL_MATMUL_Pipeline_store 
+Execute       gen_rtl MATMUL_Pipeline_store -style xilinx -f -lang vlog -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/verilog/MATMUL_MATMUL_Pipeline_store 
+Execute       syn_report -csynth -model MATMUL_Pipeline_store -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/MATMUL_Pipeline_store_csynth.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -rtlxml -model MATMUL_Pipeline_store -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/MATMUL_Pipeline_store_csynth.xml 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -verbosereport -model MATMUL_Pipeline_store -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.verbose.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       db_write -model MATMUL_Pipeline_store -f -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.adb 
+Execute       db_write -model MATMUL_Pipeline_store -bindview -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info MATMUL_Pipeline_store -p /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MATMUL' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model MATMUL -top_prefix  -sub_prefix MATMUL_ -mg_file /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MATMUL/s_axis_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'MATMUL/s_axis_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'MATMUL/s_axis_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'MATMUL/s_axis_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'MATMUL/m_axis_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'MATMUL/m_axis_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'MATMUL/m_axis_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'MATMUL/m_axis_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'MATMUL' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MATMUL'.
+INFO: [RTMG 210-278] Implementing memory 'MATMUL_A_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 423.152 MB.
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute       gen_rtl MATMUL -istop -style xilinx -f -lang vhdl -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/vhdl/MATMUL 
+Execute       gen_rtl MATMUL -istop -style xilinx -f -lang vlog -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/verilog/MATMUL 
+Execute       syn_report -csynth -model MATMUL -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/MATMUL_csynth.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -rtlxml -model MATMUL -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/MATMUL_csynth.xml 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -verbosereport -model MATMUL -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.verbose.rpt 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Command       syn_report done; 0.25 sec.
+Execute       db_write -model MATMUL -f -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.adb 
+Execute       db_write -model MATMUL -bindview -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info MATMUL -p /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL 
+Execute       export_constraint_db -f -tool general -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.constraint.tcl 
+Execute       syn_report -designview -model MATMUL -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.design.xml 
+Command       syn_report done; 0.2 sec.
+Execute       syn_report -csynthDesign -model MATMUL -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/csynth.rpt -MHOut /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/kernel_module_hierarchy.tcl 
+Execute         list_part -family xc7z020-clg484-1 
+Execute           ap_family_info -name xc7z020-clg484-1 -data names 
+Execute           ap_part_info -quiet -name xc7z020-clg484-1 -data family 
+Execute       syn_report -wcfg -model MATMUL -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model MATMUL -o /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.protoinst 
+Execute       sc_get_clocks MATMUL 
+Execute       sc_get_portdomain MATMUL 
+INFO-FLOW: Model list for RTL component generation: MATMUL_Pipeline_load_A MATMUL_Pipeline_load_B MATMUL_Pipeline_row MATMUL_Pipeline_store MATMUL
+INFO-FLOW: Handling components in module [MATMUL_Pipeline_load_A] ... 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.compgen.tcl 
+INFO-FLOW: Found component MATMUL_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model MATMUL_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [MATMUL_Pipeline_load_B] ... 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.compgen.tcl 
+INFO-FLOW: Found component MATMUL_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model MATMUL_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [MATMUL_Pipeline_row] ... 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.compgen.tcl 
+INFO-FLOW: Found component MATMUL_mul_32s_32s_32_2_1.
+INFO-FLOW: Append model MATMUL_mul_32s_32s_32_2_1
+INFO-FLOW: Found component MATMUL_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model MATMUL_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [MATMUL_Pipeline_store] ... 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.compgen.tcl 
+INFO-FLOW: Found component MATMUL_mux_16_4_32_1_1.
+INFO-FLOW: Append model MATMUL_mux_16_4_32_1_1
+INFO-FLOW: Found component MATMUL_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model MATMUL_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [MATMUL] ... 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.compgen.tcl 
+INFO-FLOW: Found component MATMUL_A_RAM_AUTO_1R1W.
+INFO-FLOW: Append model MATMUL_A_RAM_AUTO_1R1W
+INFO-FLOW: Found component MATMUL_regslice_both.
+INFO-FLOW: Append model MATMUL_regslice_both
+INFO-FLOW: Found component MATMUL_regslice_both.
+INFO-FLOW: Append model MATMUL_regslice_both
+INFO-FLOW: Found component MATMUL_regslice_both.
+INFO-FLOW: Append model MATMUL_regslice_both
+INFO-FLOW: Found component MATMUL_regslice_both.
+INFO-FLOW: Append model MATMUL_regslice_both
+INFO-FLOW: Found component MATMUL_regslice_both.
+INFO-FLOW: Append model MATMUL_regslice_both
+INFO-FLOW: Found component MATMUL_regslice_both.
+INFO-FLOW: Append model MATMUL_regslice_both
+INFO-FLOW: Found component MATMUL_regslice_both.
+INFO-FLOW: Append model MATMUL_regslice_both
+INFO-FLOW: Found component MATMUL_regslice_both.
+INFO-FLOW: Append model MATMUL_regslice_both
+INFO-FLOW: Append model MATMUL_Pipeline_load_A
+INFO-FLOW: Append model MATMUL_Pipeline_load_B
+INFO-FLOW: Append model MATMUL_Pipeline_row
+INFO-FLOW: Append model MATMUL_Pipeline_store
+INFO-FLOW: Append model MATMUL
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: MATMUL_flow_control_loop_pipe_sequential_init MATMUL_flow_control_loop_pipe_sequential_init MATMUL_mul_32s_32s_32_2_1 MATMUL_flow_control_loop_pipe_sequential_init MATMUL_mux_16_4_32_1_1 MATMUL_flow_control_loop_pipe_sequential_init MATMUL_A_RAM_AUTO_1R1W MATMUL_regslice_both MATMUL_regslice_both MATMUL_regslice_both MATMUL_regslice_both MATMUL_regslice_both MATMUL_regslice_both MATMUL_regslice_both MATMUL_regslice_both MATMUL_Pipeline_load_A MATMUL_Pipeline_load_B MATMUL_Pipeline_row MATMUL_Pipeline_store MATMUL
+INFO-FLOW: Generating /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model MATMUL_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model MATMUL_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model MATMUL_mul_32s_32s_32_2_1
+INFO-FLOW: To file: write model MATMUL_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model MATMUL_mux_16_4_32_1_1
+INFO-FLOW: To file: write model MATMUL_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model MATMUL_A_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model MATMUL_regslice_both
+INFO-FLOW: To file: write model MATMUL_regslice_both
+INFO-FLOW: To file: write model MATMUL_regslice_both
+INFO-FLOW: To file: write model MATMUL_regslice_both
+INFO-FLOW: To file: write model MATMUL_regslice_both
+INFO-FLOW: To file: write model MATMUL_regslice_both
+INFO-FLOW: To file: write model MATMUL_regslice_both
+INFO-FLOW: To file: write model MATMUL_regslice_both
+INFO-FLOW: To file: write model MATMUL_Pipeline_load_A
+INFO-FLOW: To file: write model MATMUL_Pipeline_load_B
+INFO-FLOW: To file: write model MATMUL_Pipeline_row
+INFO-FLOW: To file: write model MATMUL_Pipeline_store
+INFO-FLOW: To file: write model MATMUL
+INFO-FLOW: Generating /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/vhdl' dstVlogDir='/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/vlog' tclDir='/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db' modelList='MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_mul_32s_32s_32_2_1
+MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_mux_16_4_32_1_1
+MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_A_RAM_AUTO_1R1W
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_Pipeline_load_A
+MATMUL_Pipeline_load_B
+MATMUL_Pipeline_row
+MATMUL_Pipeline_store
+MATMUL
+' expOnly='0'
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.compgen.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.compgen.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.compgen.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.compgen.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.65 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.69 seconds; current allocated memory: 438.203 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='MATMUL_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_mul_32s_32s_32_2_1
+MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_mux_16_4_32_1_1
+MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_A_RAM_AUTO_1R1W
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_Pipeline_load_A
+MATMUL_Pipeline_load_B
+MATMUL_Pipeline_row
+MATMUL_Pipeline_store
+MATMUL
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.compgen.dataonly.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.tbgen.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.tbgen.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.tbgen.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.tbgen.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.constraint.tcl 
+Execute       sc_get_clocks MATMUL 
+Execute       source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST MATMUL MODULE2INSTS {MATMUL MATMUL MATMUL_Pipeline_load_A grp_MATMUL_Pipeline_load_A_fu_2170 MATMUL_Pipeline_load_B grp_MATMUL_Pipeline_load_B_fu_2198 MATMUL_Pipeline_row grp_MATMUL_Pipeline_row_fu_2466 MATMUL_Pipeline_store grp_MATMUL_Pipeline_store_fu_2998} INST2MODULE {MATMUL MATMUL grp_MATMUL_Pipeline_load_A_fu_2170 MATMUL_Pipeline_load_A grp_MATMUL_Pipeline_load_B_fu_2198 MATMUL_Pipeline_load_B grp_MATMUL_Pipeline_row_fu_2466 MATMUL_Pipeline_row grp_MATMUL_Pipeline_store_fu_2998 MATMUL_Pipeline_store} INSTDATA {MATMUL {DEPTH 1 CHILDREN {grp_MATMUL_Pipeline_load_A_fu_2170 grp_MATMUL_Pipeline_load_B_fu_2198 grp_MATMUL_Pipeline_row_fu_2466 grp_MATMUL_Pipeline_store_fu_2998}} grp_MATMUL_Pipeline_load_A_fu_2170 {DEPTH 2 CHILDREN {}} grp_MATMUL_Pipeline_load_B_fu_2198 {DEPTH 2 CHILDREN {}} grp_MATMUL_Pipeline_row_fu_2466 {DEPTH 2 CHILDREN {}} grp_MATMUL_Pipeline_store_fu_2998 {DEPTH 2 CHILDREN {}}} MODULEDATA {MATMUL_Pipeline_load_A {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln26_fu_380_p2 SOURCE Matrix_mul/mat_mul.cpp:26 VARIABLE add_ln26 LOOP load_A BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MATMUL_Pipeline_load_B {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln36_fu_3498_p2 SOURCE Matrix_mul/mat_mul.cpp:36 VARIABLE add_ln36 LOOP load_B BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MATMUL_Pipeline_row {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln47_fu_6206_p2 SOURCE Matrix_mul/mat_mul.cpp:47 VARIABLE add_ln47 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U281 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U281 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_1 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U282 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_2 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U283 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_3 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U282 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_4 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U284 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_5 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U285 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_6 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U286 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_7 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U283 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_8 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U287 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_9 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U284 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_10 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U288 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_11 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U289 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_12 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U290 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_13 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U291 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_14 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U292 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_15 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_1_fu_6534_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_1 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_4_fu_6552_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_4 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_7_fu_6564_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_7 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_8_fu_6570_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_8 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_11_fu_6246_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_11 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U285 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_16 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U293 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_17 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U294 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_18 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U295 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_19 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U286 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_20 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U296 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_21 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U297 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_22 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U298 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_23 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U287 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_24 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U299 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_25 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U288 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_26 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U300 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_27 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U301 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_28 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U302 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_29 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U303 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_30 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U304 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_31 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_16_fu_6593_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_16 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_19_fu_6611_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_19 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_22_fu_6623_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_22 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_23_fu_6629_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_23 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_26_fu_6264_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_26 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U289 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_32 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U305 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_33 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U306 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_34 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U307 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_35 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U290 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_36 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U308 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_37 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U309 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_38 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U310 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_39 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U291 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_40 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U311 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_41 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U292 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_42 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U312 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_43 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U313 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_44 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U314 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_45 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U315 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_46 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U316 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_47 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_31_fu_6652_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_31 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_34_fu_6670_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_34 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_37_fu_6682_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_37 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_38_fu_6688_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_38 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_41_fu_6282_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_41 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U293 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_48 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U317 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_49 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U318 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_50 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U319 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_51 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U294 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_52 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U320 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_53 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U321 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_54 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U322 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_55 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U295 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_56 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U323 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_57 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U296 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_58 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U324 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_59 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U325 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_60 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U326 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_61 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U327 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_62 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U328 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_63 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_46_fu_6711_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_46 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_49_fu_6729_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_49 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_52_fu_6741_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_52 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_53_fu_6747_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_53 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_56_fu_6300_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_56 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U297 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_64 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U329 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_65 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U330 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_66 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U331 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_67 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U298 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_68 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U332 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_69 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U333 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_70 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U334 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_71 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U299 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_72 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U335 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_73 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U300 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_74 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U336 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_75 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U337 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_76 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U338 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_77 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U339 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_78 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U340 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_79 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_61_fu_6770_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_61 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_64_fu_6788_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_64 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_67_fu_6800_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_67 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_68_fu_6806_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_68 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_71_fu_6318_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_71 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U301 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_80 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U341 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_81 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U342 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_82 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U343 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_83 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U302 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_84 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U344 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_85 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U281 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_86 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U282 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_87 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U303 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_88 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U283 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_89 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U304 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_90 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U284 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_91 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U285 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_92 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U286 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_93 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U287 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_94 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U288 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_95 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_76_fu_6874_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_76 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_79_fu_6892_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_79 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_82_fu_6904_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_82 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_83_fu_6910_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_83 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_86_fu_6336_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_86 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U305 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_96 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U289 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_97 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U290 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_98 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U291 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_99 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U306 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_100 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U292 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_101 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U293 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_102 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U294 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_103 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U307 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_104 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U295 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_105 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U308 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_106 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U296 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_107 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U297 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_108 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U298 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_109 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U299 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_110 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U300 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_111 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_91_fu_6933_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_91 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_94_fu_6951_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_94 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_97_fu_6963_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_97 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_98_fu_6969_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_98 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_101_fu_6354_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_101 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U309 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_112 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U301 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_113 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U302 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_114 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U303 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_115 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U310 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_116 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U304 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_117 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U305 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_118 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U306 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_119 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U311 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_120 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U307 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_121 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U312 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_122 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U308 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_123 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U309 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_124 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U310 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_125 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U311 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_126 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U312 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_127 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_106_fu_6992_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_106 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_109_fu_7010_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_109 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_112_fu_7022_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_112 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_113_fu_7028_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_113 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_116_fu_6372_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_116 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U313 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_128 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U313 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_129 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U314 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_130 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U315 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_131 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U314 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_132 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U316 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_133 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U317 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_134 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U318 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_135 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U315 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_136 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U319 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_137 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U316 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_138 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U320 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_139 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U321 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_140 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U322 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_141 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U323 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_142 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U324 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_143 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_121_fu_7051_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_121 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_124_fu_7069_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_124 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_127_fu_7081_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_127 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_128_fu_7087_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_128 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_131_fu_6390_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_131 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U317 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_144 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U325 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_145 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U326 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_146 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U327 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_147 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U318 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_148 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U328 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_149 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U329 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_150 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U330 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_151 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U319 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_152 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U331 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_153 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U320 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_154 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U332 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_155 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U333 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_156 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U334 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_157 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U335 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_158 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U336 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_159 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_136_fu_7110_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_136 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_139_fu_7128_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_139 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_142_fu_7140_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_142 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_143_fu_7146_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_143 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_146_fu_6408_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_146 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U321 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_160 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U337 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_161 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U338 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_162 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U339 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_163 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U322 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_164 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U340 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_165 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U341 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_166 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U342 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_167 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U323 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_168 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U343 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_169 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U324 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_170 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U344 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_171 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U281 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_172 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U282 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_173 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U283 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_174 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U284 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_175 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_151_fu_7624_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_151 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_154_fu_7163_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_154 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_157_fu_7646_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_157 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_158_fu_7168_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_158 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_161_fu_6426_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_161 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U325 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_176 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U285 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_177 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U286 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_178 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U287 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_179 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U326 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_180 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U288 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_181 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U289 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_182 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U290 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_183 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U327 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_184 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U291 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_185 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U328 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_186 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U292 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_187 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U293 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_188 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U294 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_189 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U295 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_190 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U296 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_191 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_166_fu_7667_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_166 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_169_fu_7685_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_169 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_172_fu_7697_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_172 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_173_fu_7703_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_173 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_176_fu_6444_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_176 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U329 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_192 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U297 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_193 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U298 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_194 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U299 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_195 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U330 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_196 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U300 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_197 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U301 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_198 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U302 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_199 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U331 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_200 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U303 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_201 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U332 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_202 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U304 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_203 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U305 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_204 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U306 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_205 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U307 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_206 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U308 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_207 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_181_fu_7726_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_181 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_184_fu_7744_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_184 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_187_fu_7756_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_187 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_188_fu_7762_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_188 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_191_fu_6462_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_191 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U333 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_208 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U309 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_209 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U310 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_210 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U311 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_211 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U334 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_212 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U312 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_213 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U313 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_214 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U314 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_215 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U335 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_216 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U315 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_217 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U336 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_218 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U316 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_219 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U317 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_220 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U318 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_221 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U319 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_222 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U320 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_223 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_196_fu_7785_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_196 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_199_fu_7803_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_199 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_202_fu_7815_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_202 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_203_fu_7821_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_203 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_206_fu_6480_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_206 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U337 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_224 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U321 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_225 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U322 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_226 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U323 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_227 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U338 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_228 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U324 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_229 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U325 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_230 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U326 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_231 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U339 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_232 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U327 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_233 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U340 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_234 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U328 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_235 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U329 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_236 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U330 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_237 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U331 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_238 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U332 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_239 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_211_fu_7844_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_211 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_214_fu_7862_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_214 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_217_fu_7874_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_217 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_218_fu_7880_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_218 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_221_fu_6498_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_221 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U341 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_240 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U333 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_241 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U334 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_242 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U335 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_243 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U342 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_244 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U336 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_245 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U337 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_246 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U338 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_247 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U343 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_248 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U339 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_249 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U344 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_250 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U340 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_251 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U341 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_252 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U342 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_253 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U343 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_254 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 1 OPTYPE mul PRAGMA {} RTLNAME mul_32s_32s_32_2_1_U344 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE mul_ln53_255 LOOP row BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_226_fu_7903_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_226 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_229_fu_7921_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_229 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_232_fu_7932_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_232 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_233_fu_7937_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_233 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln53_236_fu_6516_p2 SOURCE Matrix_mul/mat_mul.cpp:53 VARIABLE add_ln53_236 LOOP row BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 192 BRAM 0 URAM 0}} MATMUL_Pipeline_store {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_fu_2142_p2 SOURCE Matrix_mul/mat_mul.cpp:59 VARIABLE add_ln59 LOOP store BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MATMUL {BINDINFO {{BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_1_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_2_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_3_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_4_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_5_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_6_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_7_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_8_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_9_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_10_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_11_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_12_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_13_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_14_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME A_15_U SOURCE Matrix_mul/mat_mul.cpp:18 VARIABLE A_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 192 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 454.902 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for MATMUL.
+INFO: [VLOG 209-307] Generating Verilog RTL for MATMUL.
+Execute       syn_report -model MATMUL -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 144.45 MHz
+Command     autosyn done; 7.93 sec.
+Command   csynth_design done; 21.24 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 15.61 seconds. CPU system time: 1.7 seconds. Elapsed time: 21.24 seconds; current allocated memory: 225.926 MB.
+Command ap_source done; 21.69 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1 opened at Wed Mar 04 23:35:28 IST 2026
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z020-clg484-1 
+Execute       create_platform xc7z020-clg484-1 -board  
+DBG:HLSDevice: Trying to load device library: /home/Vivado/Vitis_HLS/2023.1/lib/lnx64.o/libxv_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /home/Vivado/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+Command       create_platform done; 0.28 sec.
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.34 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Command   open_solution done; 0.39 sec.
+Execute   set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+Execute     create_platform xc7z020-clg484-1 -board  
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   export_design -rtl verilog -format ip_catalog 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+Execute     config_export -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -rtl verilog
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=MATMUL xml_exists=0
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to MATMUL
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=8
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=20 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_mul_32s_32s_32_2_1
+MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_mux_16_4_32_1_1
+MATMUL_flow_control_loop_pipe_sequential_init
+MATMUL_A_RAM_AUTO_1R1W
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_regslice_both
+MATMUL_Pipeline_load_A
+MATMUL_Pipeline_load_B
+MATMUL_Pipeline_row
+MATMUL_Pipeline_store
+MATMUL
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source /home/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source /home/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/top-io-be.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.compgen.dataonly.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_A.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_load_B.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_row.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL_Pipeline_store.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.constraint.tcl 
+Execute     sc_get_clocks MATMUL 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to MATMUL
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=MATMUL
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.rtl_wrap.cfg.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.constraint.tcl 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/MATMUL.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/global.setting.tcl 
+Execute     source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /home/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/impl/ip/pack.sh
+INFO-FLOW: DBG:PUTS:     IP package: success /home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/impl/ip/pack.sh
+Execute     send_msg_by_id INFO @200-802@%s Matrix_mul/solution1/impl/export.zip 
+INFO: [HLS 200-802] Generated output file Matrix_mul/solution1/impl/export.zip
+Command   export_design done; 12.94 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 8.92 seconds. CPU system time: 0.96 seconds. Elapsed time: 12.94 seconds; current allocated memory: 9.996 MB.
+Command ap_source done; 13.4 sec.
+Execute cleanup_all 

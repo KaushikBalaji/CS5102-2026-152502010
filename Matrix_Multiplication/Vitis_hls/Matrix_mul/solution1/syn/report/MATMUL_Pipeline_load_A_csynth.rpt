@@ -1,0 +1,205 @@
+
+
+================================================================
+== Vitis HLS Report for 'MATMUL_Pipeline_load_A'
+================================================================
+* Date:           Wed Mar  4 23:06:57 2026
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        Matrix_mul
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.102 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       18|       18|  0.180 us|  0.180 us|   18|   18|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- load_A  |       16|       16|         1|          1|          1|    16|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     31|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     36|    -|
+|Register         |        -|    -|       7|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       7|     67|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln26_fu_380_p2                |         +|   0|  0|  13|           5|           1|
+    |ap_condition_337                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln26_fu_374_p2               |      icmp|   0|  0|  14|           5|           6|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  31|          12|           9|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_done_int           |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_3  |   9|          2|    5|         10|
+    |i_fu_142              |   9|          2|    5|         10|
+    |s_axis_TDATA_blk_n    |   9|          2|    1|          2|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  36|          8|   12|         24|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |i_fu_142     |  5|   0|    5|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  7|   0|    7|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------+-----+-----+------------+------------------------+--------------+
+|   RTL Ports   | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++---------------+-----+-----+------------+------------------------+--------------+
+|ap_clk         |   in|    1|  ap_ctrl_hs|  MATMUL_Pipeline_load_A|  return value|
+|ap_rst         |   in|    1|  ap_ctrl_hs|  MATMUL_Pipeline_load_A|  return value|
+|ap_start       |   in|    1|  ap_ctrl_hs|  MATMUL_Pipeline_load_A|  return value|
+|ap_done        |  out|    1|  ap_ctrl_hs|  MATMUL_Pipeline_load_A|  return value|
+|ap_idle        |  out|    1|  ap_ctrl_hs|  MATMUL_Pipeline_load_A|  return value|
+|ap_ready       |  out|    1|  ap_ctrl_hs|  MATMUL_Pipeline_load_A|  return value|
+|s_axis_TVALID  |   in|    1|        axis|         s_axis_V_data_V|       pointer|
+|s_axis_TDATA   |   in|  512|        axis|         s_axis_V_data_V|       pointer|
+|A_15_address0  |  out|    4|   ap_memory|                    A_15|         array|
+|A_15_ce0       |  out|    1|   ap_memory|                    A_15|         array|
+|A_15_we0       |  out|    1|   ap_memory|                    A_15|         array|
+|A_15_d0        |  out|   32|   ap_memory|                    A_15|         array|
+|A_14_address0  |  out|    4|   ap_memory|                    A_14|         array|
+|A_14_ce0       |  out|    1|   ap_memory|                    A_14|         array|
+|A_14_we0       |  out|    1|   ap_memory|                    A_14|         array|
+|A_14_d0        |  out|   32|   ap_memory|                    A_14|         array|
+|A_13_address0  |  out|    4|   ap_memory|                    A_13|         array|
+|A_13_ce0       |  out|    1|   ap_memory|                    A_13|         array|
+|A_13_we0       |  out|    1|   ap_memory|                    A_13|         array|
+|A_13_d0        |  out|   32|   ap_memory|                    A_13|         array|
+|A_12_address0  |  out|    4|   ap_memory|                    A_12|         array|
+|A_12_ce0       |  out|    1|   ap_memory|                    A_12|         array|
+|A_12_we0       |  out|    1|   ap_memory|                    A_12|         array|
+|A_12_d0        |  out|   32|   ap_memory|                    A_12|         array|
+|A_11_address0  |  out|    4|   ap_memory|                    A_11|         array|
+|A_11_ce0       |  out|    1|   ap_memory|                    A_11|         array|
+|A_11_we0       |  out|    1|   ap_memory|                    A_11|         array|
+|A_11_d0        |  out|   32|   ap_memory|                    A_11|         array|
+|A_10_address0  |  out|    4|   ap_memory|                    A_10|         array|
+|A_10_ce0       |  out|    1|   ap_memory|                    A_10|         array|
+|A_10_we0       |  out|    1|   ap_memory|                    A_10|         array|
+|A_10_d0        |  out|   32|   ap_memory|                    A_10|         array|
+|A_9_address0   |  out|    4|   ap_memory|                     A_9|         array|
+|A_9_ce0        |  out|    1|   ap_memory|                     A_9|         array|
+|A_9_we0        |  out|    1|   ap_memory|                     A_9|         array|
+|A_9_d0         |  out|   32|   ap_memory|                     A_9|         array|
+|A_8_address0   |  out|    4|   ap_memory|                     A_8|         array|
+|A_8_ce0        |  out|    1|   ap_memory|                     A_8|         array|
+|A_8_we0        |  out|    1|   ap_memory|                     A_8|         array|
+|A_8_d0         |  out|   32|   ap_memory|                     A_8|         array|
+|A_7_address0   |  out|    4|   ap_memory|                     A_7|         array|
+|A_7_ce0        |  out|    1|   ap_memory|                     A_7|         array|
+|A_7_we0        |  out|    1|   ap_memory|                     A_7|         array|
+|A_7_d0         |  out|   32|   ap_memory|                     A_7|         array|
+|A_6_address0   |  out|    4|   ap_memory|                     A_6|         array|
+|A_6_ce0        |  out|    1|   ap_memory|                     A_6|         array|
+|A_6_we0        |  out|    1|   ap_memory|                     A_6|         array|
+|A_6_d0         |  out|   32|   ap_memory|                     A_6|         array|
+|A_5_address0   |  out|    4|   ap_memory|                     A_5|         array|
+|A_5_ce0        |  out|    1|   ap_memory|                     A_5|         array|
+|A_5_we0        |  out|    1|   ap_memory|                     A_5|         array|
+|A_5_d0         |  out|   32|   ap_memory|                     A_5|         array|
+|A_4_address0   |  out|    4|   ap_memory|                     A_4|         array|
+|A_4_ce0        |  out|    1|   ap_memory|                     A_4|         array|
+|A_4_we0        |  out|    1|   ap_memory|                     A_4|         array|
+|A_4_d0         |  out|   32|   ap_memory|                     A_4|         array|
+|A_3_address0   |  out|    4|   ap_memory|                     A_3|         array|
+|A_3_ce0        |  out|    1|   ap_memory|                     A_3|         array|
+|A_3_we0        |  out|    1|   ap_memory|                     A_3|         array|
+|A_3_d0         |  out|   32|   ap_memory|                     A_3|         array|
+|A_2_address0   |  out|    4|   ap_memory|                     A_2|         array|
+|A_2_ce0        |  out|    1|   ap_memory|                     A_2|         array|
+|A_2_we0        |  out|    1|   ap_memory|                     A_2|         array|
+|A_2_d0         |  out|   32|   ap_memory|                     A_2|         array|
+|A_1_address0   |  out|    4|   ap_memory|                     A_1|         array|
+|A_1_ce0        |  out|    1|   ap_memory|                     A_1|         array|
+|A_1_we0        |  out|    1|   ap_memory|                     A_1|         array|
+|A_1_d0         |  out|   32|   ap_memory|                     A_1|         array|
+|A_address0     |  out|    4|   ap_memory|                       A|         array|
+|A_ce0          |  out|    1|   ap_memory|                       A|         array|
+|A_we0          |  out|    1|   ap_memory|                       A|         array|
+|A_d0           |  out|   32|   ap_memory|                       A|         array|
+|s_axis_TREADY  |  out|    1|        axis|         s_axis_V_last_V|       pointer|
+|s_axis_TLAST   |   in|    1|        axis|         s_axis_V_last_V|       pointer|
+|s_axis_TKEEP   |   in|   64|        axis|         s_axis_V_keep_V|       pointer|
+|s_axis_TSTRB   |   in|   64|        axis|         s_axis_V_strb_V|       pointer|
++---------------+-----+-----+------------+------------------------+--------------+
+

@@ -1,0 +1,141 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=MATMUL" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=s_axis" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=m_axis" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=A type=complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=B type=complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=AB type=complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:30:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:48:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=4" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:52:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:60:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul.cpp:63:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_naive.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_NAIVE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=s_axis" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_naive.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_NAIVE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=m_axis" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_naive.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_NAIVE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_naive.cpp:27:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_NAIVE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_naive.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_NAIVE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_naive.cpp:66:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_NAIVE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=s_axis" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=m_axis" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="ap_ctrl_none port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=A complete dim=2" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=B complete dim=1" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:28:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:44:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:55:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:71:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Matrix_mul/mat_mul_pipeline.cpp:76:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="MATMUL_PIPE_STREAM" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:62:26" msg_body="Loop 'VITIS_LOOP_62_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_62_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:49:7" msg_body="Loop 'col' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="col"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:51:22" msg_body="Loop 'product' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="product"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:39:26" msg_body="Loop 'VITIS_LOOP_39_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_39_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:29:26" msg_body="Loop 'VITIS_LOOP_29_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_29_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:12:0" msg_body="Unrolling loop 'VITIS_LOOP_62_3' (Matrix_mul/mat_mul.cpp:62:26) in function 'MATMUL' completely with a factor of 16">
+        <args Factor="16" LoopLoc="Matrix_mul/mat_mul.cpp:62:26" LoopName="VITIS_LOOP_62_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:12:0" msg_body="Unrolling loop 'col' (Matrix_mul/mat_mul.cpp:49:7) in function 'MATMUL' completely with a factor of 16">
+        <args Factor="16" LoopLoc="Matrix_mul/mat_mul.cpp:49:7" LoopName="col"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:12:0" msg_body="Unrolling loop 'product' (Matrix_mul/mat_mul.cpp:51:22) in function 'MATMUL' completely with a factor of 16">
+        <args Factor="16" LoopLoc="Matrix_mul/mat_mul.cpp:51:22" LoopName="product"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:12:0" msg_body="Unrolling loop 'VITIS_LOOP_39_2' (Matrix_mul/mat_mul.cpp:39:26) in function 'MATMUL' completely with a factor of 16">
+        <args Factor="16" LoopLoc="Matrix_mul/mat_mul.cpp:39:26" LoopName="VITIS_LOOP_39_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:12:0" msg_body="Unrolling loop 'VITIS_LOOP_29_1' (Matrix_mul/mat_mul.cpp:29:26) in function 'MATMUL' completely with a factor of 16">
+        <args Factor="16" LoopLoc="Matrix_mul/mat_mul.cpp:29:26" LoopName="VITIS_LOOP_29_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:18:6" msg_body="Applying array_partition to 'A': Complete partitioning on dimension 2.">
+        <args Dim="2" Mode="Complete" UOName="A"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:19:9" msg_body="Applying array_partition to 'B': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="B"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Matrix_mul/mat_mul.cpp:20:9" msg_body="Applying array_partition to 'AB': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="AB"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,0 +1,40 @@
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:1557:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:1557:7: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:2531:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:2531:5: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:2545:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:2545:5: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:2559:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:2559:5: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:4170:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:4170:7: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:6325:9: warning: Added loop label VITIS_LOOP_31_1:   [xilinx-label-all-loops]
+        for(int k=0;k<16;k++){
+        ^~~
+        VITIS_LOOP_31_1: 
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:6325:9: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:6337:9: warning: Added loop label VITIS_LOOP_43_2:   [xilinx-label-all-loops]
+        for(int k=0;k<16;k++){
+        ^~~
+        VITIS_LOOP_43_2: 
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:6337:9: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:6369:9: warning: Added loop label VITIS_LOOP_75_3:   [xilinx-label-all-loops]
+        for(int j=0;j<16;j++){
+        ^~~
+        VITIS_LOOP_75_3: 
+/home/sem2/SoC_Lab/Matrix_Mul/vitis_hls/Matrix_mul/solution1/.autopilot/db/mat_mul_pipeline.pp.0.cpp:6369:9: note: FIX-IT applied suggested code changes
