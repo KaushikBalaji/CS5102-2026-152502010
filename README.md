@@ -97,6 +97,24 @@ The experiments focus on **FPGA-based design**, **High-Level Synthesis (HLS)**, 
 
 ---
 
+### Experiment 5: Implementation of Insertion Sort using AXI-Stream
+
+- Designed and implemented an Insertion Sort hardware accelerator using AXI4-Stream (AXIS) protocol in HLS.
+- The design handles a maximum input size of 100 elements.
+
+**Key Tasks:**
+- Designing AXI-Stream interfaces for input and output streams
+- Handling streaming data and buffering into local arrays
+- Implementing insertion sort efficiently in HLS
+- Managing AXIS handshake signals (TVALID, TREADY, TLAST)
+- Optimizing latency using pipelining where applicable
+
+**Learning Outcome:**
+- Learning trade-offs between on-chip memory usage and performance
+- Understanding streaming-based hardware design using AXI4-Stream
+
+---
+
 ## 🧑‍🎓 Author
 
 **Kaushik Balaji M S**  
