@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op mul" ID="" IMPL="auto" LATENCY="0" OPTYPE="mul" PRAGMA="" RTLNAME="mul_3ns_3ns_6_1_1_U2" SOURCE="sw_led.cpp:22" VARIABLE="result_3" MODULE="alu_led" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op sub" ID="" IMPL="fabric" LATENCY="0" OPTYPE="sub" PRAGMA="" RTLNAME="result_2_fu_136_p2" SOURCE="sw_led.cpp:19" VARIABLE="result_2" MODULE="alu_led" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="result_fu_152_p2" SOURCE="sw_led.cpp:16" VARIABLE="result" MODULE="alu_led" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln25_fu_102_p2" SOURCE="sw_led.cpp:25" VARIABLE="icmp_ln25" MODULE="alu_led" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op udiv" ID="" IMPL="auto_seq" LATENCY="6" OPTYPE="udiv" PRAGMA="" RTLNAME="udiv_3ns_3ns_3_7_seq_1_U1" SOURCE="sw_led.cpp:26" VARIABLE="result_4" MODULE="alu_led" LOOP="" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+</BindInfo>

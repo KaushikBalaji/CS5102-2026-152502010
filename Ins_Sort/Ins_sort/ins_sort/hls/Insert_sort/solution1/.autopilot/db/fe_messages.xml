@@ -1,0 +1,21 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/csynth.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="insertion_sort_axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=insertion_sort_axis" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Insert_sort/insertSort.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="insertion_sort_axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=in_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Insert_sort/insertSort.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="insertion_sort_axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=out_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Insert_sort/insertSort.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="insertion_sort_axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="Insert_sort/insertSort.cpp:22:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="insertion_sort_axis" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=arr cyclic factor=4" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="Insert_sort/insertSort.cpp:21:6" msg_body="Applying array_partition to 'arr': Cyclic partitioning with factor 4 on dimension 1.">
+        <args Dim="1" Factor="4" Mode="Cyclic" UOName="arr"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

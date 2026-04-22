@@ -1,0 +1,13 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../sw_led_tb.cpp in debug mode
+   Generating csim.exe
+Test 1 - Addition: sw = 00, led = 00
+Test 2 - Addition: sw = 18, led = 03
+Test 3 - Addition: sw = 28, led = 05
+Test 4 - Subtraction: sw = 40, led = 00
+Test 5 - Subtraction: sw = 58, led = FD
+Test 6 - Multiplication: sw = 88, led = 00
+Test 7 - Division: sw = F3, led = 00
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

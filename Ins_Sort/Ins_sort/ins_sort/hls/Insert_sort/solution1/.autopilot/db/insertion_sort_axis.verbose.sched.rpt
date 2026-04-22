@@ -1,0 +1,280 @@
+
+
+================================================================
+== Vitis HLS Report for 'insertion_sort_axis'
+================================================================
+* Date:           Thu Mar 19 00:55:55 2026
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        Insert_sort
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.701 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_39_2  |        ?|        ?|         ?|          -|          -|  0 ~ 99|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 10 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 5 
+10 --> 11 
+11 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%j_loc = alloca i64 1"   --->   Operation 12 'alloca' 'j_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%n_loc = alloca i64 1"   --->   Operation 13 'alloca' 'n_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%indvars_iv1_loc = alloca i64 1"   --->   Operation 14 'alloca' 'indvars_iv1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%arr = alloca i64 1" [Insert_sort/insertSort.cpp:21]   --->   Operation 15 'alloca' 'arr' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%arr_1 = alloca i64 1" [Insert_sort/insertSort.cpp:21]   --->   Operation 16 'alloca' 'arr_1' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%arr_2 = alloca i64 1" [Insert_sort/insertSort.cpp:21]   --->   Operation 17 'alloca' 'arr_2' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%arr_3 = alloca i64 1" [Insert_sort/insertSort.cpp:21]   --->   Operation 18 'alloca' 'arr_3' <Predicate = true> <Delay = 0.00> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%empty = wait i32 @_ssdm_op_Wait"   --->   Operation 19 'wait' 'empty' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 20 [2/2] (2.32ns)   --->   "%call_ln0 = call void @insertion_sort_axis_Pipeline_VITIS_LOOP_31_1, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V, i32 %arr, i32 %arr_1, i32 %arr_2, i32 %arr_3, i7 %indvars_iv1_loc, i7 %n_loc"   --->   Operation 20 'call' 'call_ln0' <Predicate = true> <Delay = 2.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 6.30>
+ST_3 : Operation 21 [1/2] (6.30ns)   --->   "%call_ln0 = call void @insertion_sort_axis_Pipeline_VITIS_LOOP_31_1, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V, i32 %arr, i32 %arr_1, i32 %arr_2, i32 %arr_3, i7 %indvars_iv1_loc, i7 %n_loc"   --->   Operation 21 'call' 'call_ln0' <Predicate = true> <Delay = 6.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 3.45>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%spectopmodule_ln14 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_6" [Insert_sort/insertSort.cpp:14]   --->   Operation 22 'spectopmodule' 'spectopmodule_ln14' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 %in_stream_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %in_stream_V_data_V"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %in_stream_V_keep_V"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %in_stream_V_strb_V"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %in_stream_V_last_V"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 %out_stream_V_last_V, void @empty, i32 1, i32 1, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %out_stream_V_data_V"   --->   Operation 29 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %out_stream_V_keep_V"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %out_stream_V_strb_V"   --->   Operation 31 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %out_stream_V_last_V"   --->   Operation 32 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_1, i32 0, i32 0, void @empty_3, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln31 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 0, i1 %out_stream_V_last_V, i1 0, i1 0, void @empty_4" [Insert_sort/insertSort.cpp:31]   --->   Operation 34 'specaxissidechannel' 'specaxissidechannel_ln31' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln31 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %in_stream_V_data_V, i4 %in_stream_V_keep_V, i4 %in_stream_V_strb_V, i1 0, i1 %in_stream_V_last_V, i1 0, i1 0, void @empty_5" [Insert_sort/insertSort.cpp:31]   --->   Operation 35 'specaxissidechannel' 'specaxissidechannel_ln31' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "%indvars_iv1_loc_load = load i7 %indvars_iv1_loc"   --->   Operation 36 'load' 'indvars_iv1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%n_loc_load = load i7 %n_loc"   --->   Operation 37 'load' 'n_loc_load' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%empty_21 = wait i32 @_ssdm_op_Wait"   --->   Operation 38 'wait' 'empty_21' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (1.87ns)   --->   "%icmp_ln39 = icmp_eq  i7 %n_loc_load, i7 0" [Insert_sort/insertSort.cpp:39]   --->   Operation 39 'icmp' 'icmp_ln39' <Predicate = true> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln39 = br i1 %icmp_ln39, void %VITIS_LOOP_43_3.preheader, void %VITIS_LOOP_53_4" [Insert_sort/insertSort.cpp:39]   --->   Operation 40 'br' 'br_ln39' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%indvars_iv82 = alloca i32 1"   --->   Operation 41 'alloca' 'indvars_iv82' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 42 'alloca' 'i' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_4 : Operation 43 [1/1] (1.58ns)   --->   "%store_ln39 = store i7 1, i7 %i" [Insert_sort/insertSort.cpp:39]   --->   Operation 43 'store' 'store_ln39' <Predicate = (!icmp_ln39)> <Delay = 1.58>
+ST_4 : Operation 44 [1/1] (1.58ns)   --->   "%store_ln39 = store i7 0, i7 %indvars_iv82" [Insert_sort/insertSort.cpp:39]   --->   Operation 44 'store' 'store_ln39' <Predicate = (!icmp_ln39)> <Delay = 1.58>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%br_ln39 = br void %VITIS_LOOP_43_3" [Insert_sort/insertSort.cpp:39]   --->   Operation 45 'br' 'br_ln39' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 5.32>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "%indvars_iv82_load = load i7 %indvars_iv82"   --->   Operation 46 'load' 'indvars_iv82_load' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (1.87ns)   --->   "%icmp_ln39_1 = icmp_eq  i7 %indvars_iv82_load, i7 %n_loc_load" [Insert_sort/insertSort.cpp:39]   --->   Operation 47 'icmp' 'icmp_ln39_1' <Predicate = (!icmp_ln39)> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "%empty_22 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 0, i64 99, i64 0"   --->   Operation 48 'speclooptripcount' 'empty_22' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (1.87ns)   --->   "%add_ln39_1 = add i7 %indvars_iv82_load, i7 1" [Insert_sort/insertSort.cpp:39]   --->   Operation 49 'add' 'add_ln39_1' <Predicate = (!icmp_ln39)> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "%br_ln39 = br i1 %icmp_ln39_1, void %VITIS_LOOP_43_3.split, void %VITIS_LOOP_53_4.loopexit" [Insert_sort/insertSort.cpp:39]   --->   Operation 50 'br' 'br_ln39' <Predicate = (!icmp_ln39)> <Delay = 0.00>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "%i_load = load i7 %i" [Insert_sort/insertSort.cpp:39]   --->   Operation 51 'load' 'i_load' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%trunc_ln39 = trunc i7 %i_load" [Insert_sort/insertSort.cpp:39]   --->   Operation 52 'trunc' 'trunc_ln39' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%lshr_ln1 = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %i_load, i32 2, i32 6" [Insert_sort/insertSort.cpp:39]   --->   Operation 53 'partselect' 'lshr_ln1' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln39 = zext i5 %lshr_ln1" [Insert_sort/insertSort.cpp:39]   --->   Operation 54 'zext' 'zext_ln39' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "%arr_addr_1 = getelementptr i32 %arr, i64 0, i64 %zext_ln39" [Insert_sort/insertSort.cpp:40]   --->   Operation 55 'getelementptr' 'arr_addr_1' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%arr_1_addr_1 = getelementptr i32 %arr_1, i64 0, i64 %zext_ln39" [Insert_sort/insertSort.cpp:40]   --->   Operation 56 'getelementptr' 'arr_1_addr_1' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%arr_2_addr_1 = getelementptr i32 %arr_2, i64 0, i64 %zext_ln39" [Insert_sort/insertSort.cpp:40]   --->   Operation 57 'getelementptr' 'arr_2_addr_1' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%arr_3_addr_1 = getelementptr i32 %arr_3, i64 0, i64 %zext_ln39" [Insert_sort/insertSort.cpp:40]   --->   Operation 58 'getelementptr' 'arr_3_addr_1' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 0.00>
+ST_5 : Operation 59 [2/2] (2.32ns)   --->   "%arr_load = load i5 %arr_addr_1" [Insert_sort/insertSort.cpp:40]   --->   Operation 59 'load' 'arr_load' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_5 : Operation 60 [2/2] (2.32ns)   --->   "%arr_1_load = load i5 %arr_1_addr_1" [Insert_sort/insertSort.cpp:40]   --->   Operation 60 'load' 'arr_1_load' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_5 : Operation 61 [2/2] (2.32ns)   --->   "%arr_2_load = load i5 %arr_2_addr_1" [Insert_sort/insertSort.cpp:40]   --->   Operation 61 'load' 'arr_2_load' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_5 : Operation 62 [2/2] (2.32ns)   --->   "%arr_3_load = load i5 %arr_3_addr_1" [Insert_sort/insertSort.cpp:40]   --->   Operation 62 'load' 'arr_3_load' <Predicate = (!icmp_ln39 & !icmp_ln39_1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_5 : Operation 63 [1/1] (0.00ns)   --->   "%br_ln0 = br void %VITIS_LOOP_53_4"   --->   Operation 63 'br' 'br_ln0' <Predicate = (!icmp_ln39 & icmp_ln39_1)> <Delay = 0.00>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%empty_23 = wait i32 @_ssdm_op_Wait"   --->   Operation 64 'wait' 'empty_23' <Predicate = (icmp_ln39_1) | (icmp_ln39)> <Delay = 0.00>
+ST_5 : Operation 65 [2/2] (3.45ns)   --->   "%call_ln0 = call void @insertion_sort_axis_Pipeline_VITIS_LOOP_53_4, i7 %indvars_iv1_loc_load, i32 %arr, i32 %arr_1, i32 %arr_2, i32 %arr_3, i7 %n_loc_load, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 %out_stream_V_last_V"   --->   Operation 65 'call' 'call_ln0' <Predicate = (icmp_ln39_1) | (icmp_ln39)> <Delay = 3.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 4.14>
+ST_6 : Operation 66 [1/2] (2.32ns)   --->   "%arr_load = load i5 %arr_addr_1" [Insert_sort/insertSort.cpp:40]   --->   Operation 66 'load' 'arr_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_6 : Operation 67 [1/2] (2.32ns)   --->   "%arr_1_load = load i5 %arr_1_addr_1" [Insert_sort/insertSort.cpp:40]   --->   Operation 67 'load' 'arr_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_6 : Operation 68 [1/2] (2.32ns)   --->   "%arr_2_load = load i5 %arr_2_addr_1" [Insert_sort/insertSort.cpp:40]   --->   Operation 68 'load' 'arr_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_6 : Operation 69 [1/2] (2.32ns)   --->   "%arr_3_load = load i5 %arr_3_addr_1" [Insert_sort/insertSort.cpp:40]   --->   Operation 69 'load' 'arr_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_6 : Operation 70 [1/1] (1.82ns)   --->   "%key = mux i32 @_ssdm_op_Mux.ap_auto.4i32.i2, i32 %arr_load, i32 %arr_1_load, i32 %arr_2_load, i32 %arr_3_load, i2 %trunc_ln39" [Insert_sort/insertSort.cpp:40]   --->   Operation 70 'mux' 'key' <Predicate = true> <Delay = 1.82> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 1.58>
+ST_7 : Operation 71 [2/2] (1.58ns)   --->   "%call_ln40 = call void @insertion_sort_axis_Pipeline_VITIS_LOOP_43_3, i7 %indvars_iv82_load, i32 %arr, i32 %arr_1, i32 %arr_2, i32 %arr_3, i32 %key, i7 %j_loc" [Insert_sort/insertSort.cpp:40]   --->   Operation 71 'call' 'call_ln40' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 72 [1/2] (0.00ns)   --->   "%call_ln40 = call void @insertion_sort_axis_Pipeline_VITIS_LOOP_43_3, i7 %indvars_iv82_load, i32 %arr, i32 %arr_1, i32 %arr_2, i32 %arr_3, i32 %key, i7 %j_loc" [Insert_sort/insertSort.cpp:40]   --->   Operation 72 'call' 'call_ln40' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 4.19>
+ST_9 : Operation 73 [1/1] (0.00ns)   --->   "%specloopname_ln39 = specloopname void @_ssdm_op_SpecLoopName, void @empty_9" [Insert_sort/insertSort.cpp:39]   --->   Operation 73 'specloopname' 'specloopname_ln39' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 74 [1/1] (0.00ns)   --->   "%j_loc_load = load i7 %j_loc"   --->   Operation 74 'load' 'j_loc_load' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 75 [1/1] (0.00ns)   --->   "%trunc_ln47 = trunc i7 %j_loc_load" [Insert_sort/insertSort.cpp:47]   --->   Operation 75 'trunc' 'trunc_ln47' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 76 [1/1] (1.87ns)   --->   "%add_ln47 = add i7 %j_loc_load, i7 1" [Insert_sort/insertSort.cpp:47]   --->   Operation 76 'add' 'add_ln47' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%lshr_ln3 = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %add_ln47, i32 2, i32 6" [Insert_sort/insertSort.cpp:47]   --->   Operation 77 'partselect' 'lshr_ln3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%zext_ln47 = zext i5 %lshr_ln3" [Insert_sort/insertSort.cpp:47]   --->   Operation 78 'zext' 'zext_ln47' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 79 [1/1] (0.00ns)   --->   "%arr_addr = getelementptr i32 %arr, i64 0, i64 %zext_ln47" [Insert_sort/insertSort.cpp:47]   --->   Operation 79 'getelementptr' 'arr_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 80 [1/1] (0.00ns)   --->   "%arr_1_addr = getelementptr i32 %arr_1, i64 0, i64 %zext_ln47" [Insert_sort/insertSort.cpp:47]   --->   Operation 80 'getelementptr' 'arr_1_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 81 [1/1] (0.00ns)   --->   "%arr_2_addr = getelementptr i32 %arr_2, i64 0, i64 %zext_ln47" [Insert_sort/insertSort.cpp:47]   --->   Operation 81 'getelementptr' 'arr_2_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 82 [1/1] (0.00ns)   --->   "%arr_3_addr = getelementptr i32 %arr_3, i64 0, i64 %zext_ln47" [Insert_sort/insertSort.cpp:47]   --->   Operation 82 'getelementptr' 'arr_3_addr' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 83 [1/1] (1.86ns)   --->   "%switch_ln47 = switch i2 %trunc_ln47, void %arrayidx17.case.0, i2 2, void %arrayidx17.case.3, i2 0, void %arrayidx17.case.1, i2 1, void %arrayidx17.case.2" [Insert_sort/insertSort.cpp:47]   --->   Operation 83 'switch' 'switch_ln47' <Predicate = true> <Delay = 1.86>
+ST_9 : Operation 84 [1/1] (2.32ns)   --->   "%store_ln47 = store i32 %key, i5 %arr_2_addr" [Insert_sort/insertSort.cpp:47]   --->   Operation 84 'store' 'store_ln47' <Predicate = (trunc_ln47 == 1)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_9 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln47 = br void %arrayidx17.exit" [Insert_sort/insertSort.cpp:47]   --->   Operation 85 'br' 'br_ln47' <Predicate = (trunc_ln47 == 1)> <Delay = 0.00>
+ST_9 : Operation 86 [1/1] (2.32ns)   --->   "%store_ln47 = store i32 %key, i5 %arr_1_addr" [Insert_sort/insertSort.cpp:47]   --->   Operation 86 'store' 'store_ln47' <Predicate = (trunc_ln47 == 0)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_9 : Operation 87 [1/1] (0.00ns)   --->   "%br_ln47 = br void %arrayidx17.exit" [Insert_sort/insertSort.cpp:47]   --->   Operation 87 'br' 'br_ln47' <Predicate = (trunc_ln47 == 0)> <Delay = 0.00>
+ST_9 : Operation 88 [1/1] (2.32ns)   --->   "%store_ln47 = store i32 %key, i5 %arr_3_addr" [Insert_sort/insertSort.cpp:47]   --->   Operation 88 'store' 'store_ln47' <Predicate = (trunc_ln47 == 2)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_9 : Operation 89 [1/1] (0.00ns)   --->   "%br_ln47 = br void %arrayidx17.exit" [Insert_sort/insertSort.cpp:47]   --->   Operation 89 'br' 'br_ln47' <Predicate = (trunc_ln47 == 2)> <Delay = 0.00>
+ST_9 : Operation 90 [1/1] (2.32ns)   --->   "%store_ln47 = store i32 %key, i5 %arr_addr" [Insert_sort/insertSort.cpp:47]   --->   Operation 90 'store' 'store_ln47' <Predicate = (trunc_ln47 == 3)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_9 : Operation 91 [1/1] (0.00ns)   --->   "%br_ln47 = br void %arrayidx17.exit" [Insert_sort/insertSort.cpp:47]   --->   Operation 91 'br' 'br_ln47' <Predicate = (trunc_ln47 == 3)> <Delay = 0.00>
+ST_9 : Operation 92 [1/1] (0.00ns)   --->   "%i_load_1 = load i7 %i" [Insert_sort/insertSort.cpp:39]   --->   Operation 92 'load' 'i_load_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 93 [1/1] (1.87ns)   --->   "%add_ln39 = add i7 %i_load_1, i7 1" [Insert_sort/insertSort.cpp:39]   --->   Operation 93 'add' 'add_ln39' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 94 [1/1] (1.58ns)   --->   "%store_ln39 = store i7 %add_ln39, i7 %i" [Insert_sort/insertSort.cpp:39]   --->   Operation 94 'store' 'store_ln39' <Predicate = true> <Delay = 1.58>
+ST_9 : Operation 95 [1/1] (1.58ns)   --->   "%store_ln39 = store i7 %add_ln39_1, i7 %indvars_iv82" [Insert_sort/insertSort.cpp:39]   --->   Operation 95 'store' 'store_ln39' <Predicate = true> <Delay = 1.58>
+ST_9 : Operation 96 [1/1] (0.00ns)   --->   "%br_ln39 = br void %VITIS_LOOP_43_3" [Insert_sort/insertSort.cpp:39]   --->   Operation 96 'br' 'br_ln39' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 5> <Delay = 4.14>
+ST_10 : Operation 97 [1/2] (4.14ns)   --->   "%call_ln0 = call void @insertion_sort_axis_Pipeline_VITIS_LOOP_53_4, i7 %indvars_iv1_loc_load, i32 %arr, i32 %arr_1, i32 %arr_2, i32 %arr_3, i7 %n_loc_load, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 %out_stream_V_last_V"   --->   Operation 97 'call' 'call_ln0' <Predicate = true> <Delay = 4.14> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 6> <Delay = 0.00>
+ST_11 : Operation 98 [1/1] (0.00ns)   --->   "%ret_ln63 = ret" [Insert_sort/insertSort.cpp:63]   --->   Operation 98 'ret' 'ret_ln63' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 2.322ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'insertion_sort_axis_Pipeline_VITIS_LOOP_31_1' [31]  (2.322 ns)
+
+ <State 3>: 6.306ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'insertion_sort_axis_Pipeline_VITIS_LOOP_31_1' [31]  (6.306 ns)
+
+ <State 4>: 3.458ns
+The critical path consists of the following:
+	'load' operation ('n_loc_load') on local variable 'n_loc' [33]  (0.000 ns)
+	'icmp' operation ('icmp_ln39', Insert_sort/insertSort.cpp:39) [35]  (1.870 ns)
+	blocking operation 1.588 ns on control path)
+
+ <State 5>: 5.328ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'insertion_sort_axis_Pipeline_VITIS_LOOP_53_4' [97]  (3.458 ns)
+	blocking operation 1.87 ns on control path)
+
+ <State 6>: 4.149ns
+The critical path consists of the following:
+	'load' operation ('arr_load', Insert_sort/insertSort.cpp:40) on array 'arr', Insert_sort/insertSort.cpp:21 [59]  (2.322 ns)
+	'mux' operation ('key', Insert_sort/insertSort.cpp:40) [63]  (1.827 ns)
+
+ <State 7>: 1.588ns
+The critical path consists of the following:
+	'call' operation ('call_ln40', Insert_sort/insertSort.cpp:40) to 'insertion_sort_axis_Pipeline_VITIS_LOOP_43_3' [64]  (1.588 ns)
+
+ <State 8>: 0.000ns
+The critical path consists of the following:
+
+ <State 9>: 4.192ns
+The critical path consists of the following:
+	'load' operation ('j_loc_load') on local variable 'j_loc' [65]  (0.000 ns)
+	'add' operation ('add_ln47', Insert_sort/insertSort.cpp:47) [67]  (1.870 ns)
+	'getelementptr' operation ('arr_2_addr', Insert_sort/insertSort.cpp:47) [72]  (0.000 ns)
+	'store' operation ('store_ln47', Insert_sort/insertSort.cpp:47) of variable 'key', Insert_sort/insertSort.cpp:40 on array 'arr', Insert_sort/insertSort.cpp:21 [76]  (2.322 ns)
+
+ <State 10>: 4.149ns
+The critical path consists of the following:
+	'call' operation ('call_ln0') to 'insertion_sort_axis_Pipeline_VITIS_LOOP_53_4' [97]  (4.149 ns)
+
+ <State 11>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,17 @@
+{
+  "0": {
+    "basicblocks": 21,
+    "calls": "",
+    "file": "insertSort.cpp",
+    "fileloc": 14,
+    "instructions": 121,
+    "loads": {
+      "L": 6
+    },
+    "name": "insertion_sort_axis",
+    "stores": {
+      "L": 10
+    },
+    "total_instructions": 121
+  }
+}

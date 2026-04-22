@@ -1,0 +1,19 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../testbench.cpp in debug mode
+   Generating csim.exe
+Output[0] = 0 | Expected = 0
+Output[1] = 1 | Expected = 1
+Output[2] = 2 | Expected = 2
+Output[3] = 3 | Expected = 3
+Output[4] = 4 | Expected = 4
+Output[5] = 5 | Expected = 5
+Output[6] = 6 | Expected = 6
+Output[7] = 7 | Expected = 7
+Output[8] = 8 | Expected = 8
+Output[9] = 9 | Expected = 9
+
+✅ TEST PASSED
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 10
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

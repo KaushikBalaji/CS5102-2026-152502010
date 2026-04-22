@@ -1,0 +1,146 @@
+
+
+================================================================
+== Synthesis Summary Report of 'insertion_sort_axis'
+================================================================
++ General Information: 
+    * Date:           Thu Mar 19 00:55:56 2026
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        Insert_sort
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |                      Modules                     | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |    |           |           |     |
+    |                      & Loops                     | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT    | URAM|
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+    |+ insertion_sort_axis                             |     -|  0.60|        -|          -|         -|        -|     -|        no|     -|   -|  349 (~0%)|  1045 (1%)|    -|
+    | + insertion_sort_axis_Pipeline_VITIS_LOOP_31_1   |     -|  0.99|        -|          -|         -|        -|     -|        no|     -|   -|   16 (~0%)|   84 (~0%)|    -|
+    |  o VITIS_LOOP_31_1                               |     -|  7.30|        -|          -|         1|        1|     -|       yes|     -|   -|          -|          -|    -|
+    | + insertion_sort_axis_Pipeline_VITIS_LOOP_53_4   |     -|  3.15|      102|  1.020e+03|         -|      102|     -|        no|     -|   -|   13 (~0%)|  111 (~0%)|    -|
+    |  o VITIS_LOOP_53_4                               |     -|  7.30|      100|  1.000e+03|         2|        1|   100|       yes|     -|   -|          -|          -|    -|
+    | o VITIS_LOOP_39_2                                |     -|  7.30|        -|          -|         -|        -|     -|        no|     -|   -|          -|          -|    -|
+    |  + insertion_sort_axis_Pipeline_VITIS_LOOP_43_3  |     -|  0.60|        -|          -|         -|        -|     -|        no|     -|   -|   65 (~0%)|  190 (~0%)|    -|
+    |   o VITIS_LOOP_43_3                              |    II|  7.30|        -|          -|         3|        3|     -|       yes|     -|   -|          -|          -|    -|
+    +--------------------------------------------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+
+| Interface     | Data Width | Address Width |
++---------------+------------+---------------+
+| s_axi_control | 32         | 4             |
++---------------+------------+---------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface  | Direction | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+| in_stream  | in        | both          | 32    | 4     | 1     | 1      | 4     | 1      |
+| out_stream | out       | both          | 32    | 4     | 1     | 1      | 4     | 1      |
++------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++------------+-----------+---------------------------------------------+
+| Argument   | Direction | Datatype                                    |
++------------+-----------+---------------------------------------------+
+| in_stream  | in        | stream<hls::axis<ap_uint<32>, 0, 0, 0>, 0>& |
+| out_stream | out       | stream<hls::axis<ap_uint<32>, 0, 0, 0>, 0>& |
++------------+-----------+---------------------------------------------+
+
+* SW-to-HW Mapping
++------------+--------------+-----------+
+| Argument   | HW Interface | HW Type   |
++------------+--------------+-----------+
+| in_stream  | in_stream    | interface |
+| out_stream | out_stream   | interface |
++------------+--------------+-----------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------+-----+--------+------------+-----+--------+---------+
+| Name                                            | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++-------------------------------------------------+-----+--------+------------+-----+--------+---------+
+| + insertion_sort_axis                           | 0   |        |            |     |        |         |
+|   add_ln39_1_fu_278_p2                          | -   |        | add_ln39_1 | add | fabric | 0       |
+|   add_ln47_fu_326_p2                            | -   |        | add_ln47   | add | fabric | 0       |
+|   add_ln39_fu_350_p2                            | -   |        | add_ln39   | add | fabric | 0       |
+|  + insertion_sort_axis_Pipeline_VITIS_LOOP_31_1 | 0   |        |            |     |        |         |
+|    add_ln33_fu_208_p2                           | -   |        | add_ln33   | add | fabric | 0       |
+|    add_ln34_fu_232_p2                           | -   |        | add_ln34   | add | fabric | 0       |
+|  + insertion_sort_axis_Pipeline_VITIS_LOOP_53_4 | 0   |        |            |     |        |         |
+|    add_ln53_fu_174_p2                           | -   |        | add_ln53   | add | fabric | 0       |
+|  + insertion_sort_axis_Pipeline_VITIS_LOOP_43_3 | 0   |        |            |     |        |         |
+|    add_ln44_fu_231_p2                           | -   |        | add_ln44   | add | fabric | 0       |
+|    add_ln45_fu_254_p2                           | -   |        | add_ln45   | add | fabric | 0       |
++-------------------------------------------------+-----+--------+------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-----------------------+------+------+--------+----------+---------+------+---------+
+| Name                  | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++-----------------------+------+------+--------+----------+---------+------+---------+
+| + insertion_sort_axis | 0    | 0    |        |          |         |      |         |
+|   arr_U               | -    | -    |        | arr      | ram_1p  | auto | 1       |
+|   arr_1_U             | -    | -    |        | arr_1    | ram_1p  | auto | 1       |
+|   arr_2_U             | -    | -    |        | arr_2    | ram_1p  | auto | 1       |
+|   arr_3_U             | -    | -    |        | arr_3    | ram_1p  | auto | 1       |
++-----------------------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+--------------------------------------+------------------------------------------------------------------+
+| Type            | Options                              | Location                                                         |
++-----------------+--------------------------------------+------------------------------------------------------------------+
+| interface       | axis port=in_stream                  | Insert_sort/insertSort.cpp:17 in insertion_sort_axis, in_stream  |
+| interface       | axis port=out_stream                 | Insert_sort/insertSort.cpp:18 in insertion_sort_axis, out_stream |
+| interface       | s_axilite port=return bundle=control | Insert_sort/insertSort.cpp:19 in insertion_sort_axis, return     |
+| array_partition | variable=arr cyclic factor=4         | Insert_sort/insertSort.cpp:22 in insertion_sort_axis, arr        |
++-----------------+--------------------------------------+------------------------------------------------------------------+
+
+

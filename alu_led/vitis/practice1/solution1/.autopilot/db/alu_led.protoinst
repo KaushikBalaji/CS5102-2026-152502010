@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"alu_led": {
+			"proto_instances": {
+			}
+		}
+	}
+}

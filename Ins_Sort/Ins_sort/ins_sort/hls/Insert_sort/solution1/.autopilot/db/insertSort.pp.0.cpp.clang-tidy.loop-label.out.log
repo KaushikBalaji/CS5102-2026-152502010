@@ -1,0 +1,45 @@
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:1452:7: warning: Added loop label VITIS_LOOP_1213_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1213_1: 
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:1452:7: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:2426:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:2426:5: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:2440:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:2440:5: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:2454:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:2454:5: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:4065:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:4065:7: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:6329:5: warning: Added loop label VITIS_LOOP_31_1:   [xilinx-label-all-loops]
+    do {
+    ^~
+    VITIS_LOOP_31_1: 
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:6329:5: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:6337:5: warning: Added loop label VITIS_LOOP_39_2:   [xilinx-label-all-loops]
+    for (int i = 1; i < n; i++) {
+    ^~~
+    VITIS_LOOP_39_2: 
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:6337:5: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:6341:9: warning: Added loop label VITIS_LOOP_43_3:   [xilinx-label-all-loops]
+        while (j >= 0 && arr[j] > key) {
+        ^~~~~
+        VITIS_LOOP_43_3: 
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:6341:9: note: FIX-IT applied suggested code changes
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:6351:5: warning: Added loop label VITIS_LOOP_53_4:   [xilinx-label-all-loops]
+    for (int i = 0; i < n; i++) {
+    ^~~
+    VITIS_LOOP_53_4: 
+/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/.autopilot/db/insertSort.pp.0.cpp:6351:5: note: FIX-IT applied suggested code changes

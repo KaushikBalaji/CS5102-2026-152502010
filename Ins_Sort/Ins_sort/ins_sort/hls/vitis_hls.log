@@ -1,0 +1,43 @@
+INFO: [HLS 200-10] Running '/home/Vivado/Vitis_HLS/2023.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'kaushik' on host 'kaushik-OMEN' (Linux_x86_64 version 6.8.0-106-generic) on Thu Mar 19 00:56:01 IST 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/sem2/SoC_Lab/ins_sort/hls'
+Sourcing Tcl script '/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/export.tcl'
+INFO: [HLS 200-1510] Running: source /home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1/export.tcl
+INFO: [HLS 200-1510] Running: open_project Insert_sort 
+INFO: [HLS 200-10] Opening project '/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort'.
+INFO: [HLS 200-1510] Running: set_top insertion_sort_axis 
+INFO: [HLS 200-1510] Running: add_files Insert_sort/insertSort.cpp 
+INFO: [HLS 200-10] Adding design file 'Insert_sort/insertSort.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file 'testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/Vivado/Vivado/2023.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 00:56:09 2026...
+INFO: [HLS 200-802] Generated output file Insert_sort/solution1/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 7.1 seconds. CPU system time: 0.58 seconds. Elapsed time: 10.11 seconds; current allocated memory: 7.805 MB.
+INFO: [HLS 200-112] Total CPU user time: 7.88 seconds. Total CPU system time: 0.71 seconds. Total elapsed time: 10.89 seconds; peak allocated memory: 208.840 MB.

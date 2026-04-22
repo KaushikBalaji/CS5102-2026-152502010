@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'insertion_sort_axis_Pipeline_VITIS_LOOP_53_4'
+================================================================
+* Date:           Thu Mar 19 00:55:55 2026
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        Insert_sort
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.149 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        3|      102|  30.000 ns|  1.020 us|    3|  102|       no|
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip  |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+        |- VITIS_LOOP_53_4  |        1|      100|         2|          1|          1|  1 ~ 100|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.45>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specaxissidechannel_ln0 = specaxissidechannel void @_ssdm_op_SpecAXISSideChannel, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 0, i1 %out_stream_V_last_V, i1 0, i1 0, void @empty_4"   --->   Operation 6 'specaxissidechannel' 'specaxissidechannel_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %out_stream_V_last_V, i4 %out_stream_V_strb_V, i4 %out_stream_V_keep_V, i32 %out_stream_V_data_V, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%n_reload_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %n_reload"   --->   Operation 8 'read' 'n_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%indvars_iv1_reload_read = read i7 @_ssdm_op_Read.ap_auto.i7, i7 %indvars_iv1_reload"   --->   Operation 9 'read' 'indvars_iv1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.58ns)   --->   "%store_ln0 = store i7 0, i7 %i"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc34"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i_1 = load i7 %i"   --->   Operation 12 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 13 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (1.87ns)   --->   "%icmp_ln53 = icmp_eq  i7 %i_1, i7 %indvars_iv1_reload_read" [Insert_sort/insertSort.cpp:53]   --->   Operation 14 'icmp' 'icmp_ln53' <Predicate = true> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 100, i64 0"   --->   Operation 15 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (1.87ns)   --->   "%add_ln53 = add i7 %i_1, i7 1" [Insert_sort/insertSort.cpp:53]   --->   Operation 16 'add' 'add_ln53' <Predicate = true> <Delay = 1.87> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln53 = br i1 %icmp_ln53, void %for.inc34.split, void %for.end36.exitStub" [Insert_sort/insertSort.cpp:53]   --->   Operation 17 'br' 'br_ln53' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%empty_18 = trunc i7 %i_1"   --->   Operation 18 'trunc' 'empty_18' <Predicate = (!icmp_ln53)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%lshr_ln4 = partselect i5 @_ssdm_op_PartSelect.i5.i7.i32.i32, i7 %i_1, i32 2, i32 6" [Insert_sort/insertSort.cpp:53]   --->   Operation 19 'partselect' 'lshr_ln4' <Predicate = (!icmp_ln53)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln53 = zext i5 %lshr_ln4" [Insert_sort/insertSort.cpp:53]   --->   Operation 20 'zext' 'zext_ln53' <Predicate = (!icmp_ln53)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%arr_addr = getelementptr i32 %arr, i64 0, i64 %zext_ln53" [Insert_sort/insertSort.cpp:56]   --->   Operation 21 'getelementptr' 'arr_addr' <Predicate = (!icmp_ln53)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%arr_1_addr = getelementptr i32 %arr_1, i64 0, i64 %zext_ln53" [Insert_sort/insertSort.cpp:56]   --->   Operation 22 'getelementptr' 'arr_1_addr' <Predicate = (!icmp_ln53)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%arr_2_addr = getelementptr i32 %arr_2, i64 0, i64 %zext_ln53" [Insert_sort/insertSort.cpp:56]   --->   Operation 23 'getelementptr' 'arr_2_addr' <Predicate = (!icmp_ln53)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%arr_3_addr = getelementptr i32 %arr_3, i64 0, i64 %zext_ln53" [Insert_sort/insertSort.cpp:56]   --->   Operation 24 'getelementptr' 'arr_3_addr' <Predicate = (!icmp_ln53)> <Delay = 0.00>
+ST_1 : Operation 25 [2/2] (2.32ns)   --->   "%arr_load = load i5 %arr_addr" [Insert_sort/insertSort.cpp:56]   --->   Operation 25 'load' 'arr_load' <Predicate = (!icmp_ln53)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_1 : Operation 26 [2/2] (2.32ns)   --->   "%arr_1_load = load i5 %arr_1_addr" [Insert_sort/insertSort.cpp:56]   --->   Operation 26 'load' 'arr_1_load' <Predicate = (!icmp_ln53)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_1 : Operation 27 [2/2] (2.32ns)   --->   "%arr_2_load = load i5 %arr_2_addr" [Insert_sort/insertSort.cpp:56]   --->   Operation 27 'load' 'arr_2_load' <Predicate = (!icmp_ln53)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_1 : Operation 28 [2/2] (2.32ns)   --->   "%arr_3_load = load i5 %arr_3_addr" [Insert_sort/insertSort.cpp:56]   --->   Operation 28 'load' 'arr_3_load' <Predicate = (!icmp_ln53)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_1 : Operation 29 [1/1] (1.87ns)   --->   "%out_pkt_last = icmp_eq  i7 %i_1, i7 %n_reload_read" [Insert_sort/insertSort.cpp:57]   --->   Operation 29 'icmp' 'out_pkt_last' <Predicate = (!icmp_ln53)> <Delay = 1.87> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.87> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (1.58ns)   --->   "%store_ln53 = store i7 %add_ln53, i7 %i" [Insert_sort/insertSort.cpp:53]   --->   Operation 30 'store' 'store_ln53' <Predicate = (!icmp_ln53)> <Delay = 1.58>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 39 'ret' 'ret_ln0' <Predicate = (icmp_ln53)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.14>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%specloopname_ln53 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [Insert_sort/insertSort.cpp:53]   --->   Operation 31 'specloopname' 'specloopname_ln53' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/2] (2.32ns)   --->   "%arr_load = load i5 %arr_addr" [Insert_sort/insertSort.cpp:56]   --->   Operation 32 'load' 'arr_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_2 : Operation 33 [1/2] (2.32ns)   --->   "%arr_1_load = load i5 %arr_1_addr" [Insert_sort/insertSort.cpp:56]   --->   Operation 33 'load' 'arr_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_2 : Operation 34 [1/2] (2.32ns)   --->   "%arr_2_load = load i5 %arr_2_addr" [Insert_sort/insertSort.cpp:56]   --->   Operation 34 'load' 'arr_2_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_2 : Operation 35 [1/2] (2.32ns)   --->   "%arr_3_load = load i5 %arr_3_addr" [Insert_sort/insertSort.cpp:56]   --->   Operation 35 'load' 'arr_3_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 25> <RAM>
+ST_2 : Operation 36 [1/1] (1.82ns)   --->   "%out_pkt_data = mux i32 @_ssdm_op_Mux.ap_auto.4i32.i2, i32 %arr_load, i32 %arr_1_load, i32 %arr_2_load, i32 %arr_3_load, i2 %empty_18" [Insert_sort/insertSort.cpp:56]   --->   Operation 36 'mux' 'out_pkt_data' <Predicate = true> <Delay = 1.82> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%write_ln61 = write void @_ssdm_op_Write.axis.volatile.i32P0A.i4P0A.i4P0A.i1P0A, i32 %out_stream_V_data_V, i4 %out_stream_V_keep_V, i4 %out_stream_V_strb_V, i1 %out_stream_V_last_V, i32 %out_pkt_data, i4 15, i4 15, i1 %out_pkt_last" [Insert_sort/insertSort.cpp:61]   --->   Operation 37 'write' 'write_ln61' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln53 = br void %for.inc34" [Insert_sort/insertSort.cpp:53]   --->   Operation 38 'br' 'br_ln53' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.458ns
+The critical path consists of the following:
+	'alloca' operation ('i') [11]  (0.000 ns)
+	'load' operation ('i') on local variable 'i' [19]  (0.000 ns)
+	'add' operation ('add_ln53', Insert_sort/insertSort.cpp:53) [23]  (1.870 ns)
+	'store' operation ('store_ln53', Insert_sort/insertSort.cpp:53) of variable 'add_ln53', Insert_sort/insertSort.cpp:53 on local variable 'i' [41]  (1.588 ns)
+
+ <State 2>: 4.149ns
+The critical path consists of the following:
+	'load' operation ('arr_load', Insert_sort/insertSort.cpp:56) on array 'arr' [34]  (2.322 ns)
+	'mux' operation ('out_pkt.data', Insert_sort/insertSort.cpp:56) [38]  (1.827 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="insertSort.cpp" path="/home/sem2/SoC_Lab/ins_sort/hls/Insert_sort/insertSort.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/home/sem2/SoC_Lab/ins_sort/hls/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
